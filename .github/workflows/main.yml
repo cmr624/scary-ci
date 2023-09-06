@@ -5,7 +5,8 @@ on:
 
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-
+  ITCH_USERNAME: carlos-michael
+  ITCH_GAME_ID: scary-jam
 jobs:
   checklicense:
     name: check if UNITY_LICENSE is set in github secrets
@@ -98,22 +99,47 @@ jobs:
         with:
           name: build_${{ matrix.targetPlatform }}
           path: build/${{ matrix.targetPlatform }}
-  deployPages:
-    needs: build
-    name: Deploy to Github Pages 🚀
+  deploy:
+    name: Upload to Itch
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        channel:
+          # - windows
+          - webgl
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
+    name: Deploy - Itch.io ${{ matrix.template }}
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v2.0.8
         with:
-          name: build_WebGL
-          path: build
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.4
+          name: ${{ matrix.channel }}
+          path: build/${{ matrix.channel }}
+      - uses: KikimoraGames/itch-publish@v0.0.3
         with:
-          branch: gh-pages
-          folder: build/WebGL       
+          butlerApiKey: ${{secrets.BUTLER_API_KEY}}
+          gameData: ./build/${{ matrix.template }}
+          itchUsername: ${{env.ITCH_USERNAME}}
+          itchGameId: ${{ env.ITCH_GAME_ID }}
+          buildChannel: ${{ matrix.channel }}
+          buildNumber: ${{ needs.version.outputs.version_hash }}
+  # deployPages:
+  #   needs: build
+  #   name: Deploy to Github Pages 🚀
+  #   runs-on: ubuntu-latest
+  #   if: github.ref == 'refs/heads/main'
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v2
+
+  #     - uses: actions/download-artifact@v2
+  #       with:
+  #         name: build_WebGL
+  #         path: build
+
+  #     - name: Deploy 🚀
+  #       uses: JamesIves/github-pages-deploy-action@4.1.4
+  #       with:
+  #         branch: gh-pages
+  #         folder: build/WebGL       
