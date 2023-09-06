@@ -100,8 +100,6 @@ jobs:
           name: build_${{ matrix.targetPlatform }}
           path: build/${{ matrix.targetPlatform }}
   deploy:
-    name: Upload to Itch
-    runs-on: ubuntu-latest
     strategy:
       fail-fast: true
       matrix:
@@ -110,6 +108,7 @@ jobs:
           - webgl
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
+    name: Deploy - Itch.io ${{ matrix.template }}
     steps:
       - uses: actions/download-artifact@v2.0.8
         with:
