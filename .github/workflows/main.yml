@@ -76,8 +76,8 @@ jobs:
       fail-fast: false
       matrix:
         targetPlatform:
-          # - StandaloneOSX # Build a macOS standalone (Intel 64-bit).
-          # - StandaloneWindows64 # Build a Windows 64-bit standalone.
+          - StandaloneOSX # Build a macOS standalone (Intel 64-bit).
+          - StandaloneWindows64 # Build a Windows 64-bit standalone.
           - WebGL 
     steps:
       - uses: actions/checkout@v2
@@ -105,8 +105,9 @@ jobs:
       fail-fast: true
       matrix:
         channel:
-          # - windows
+          - windows
           - webgl
+          - mac
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     name: Deploy - Itch.io ${{ matrix.template }}
