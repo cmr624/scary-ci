@@ -25,6 +25,10 @@ namespace Unity.FPS.UI
 
         [Tooltip("Toggle component for framerate display")]
         public Toggle FramerateToggle;
+        
+        [Tooltip("Toggle component for invert Y axis")]
+        public Toggle InvertYAxisToggle;
+
 
         [Tooltip("GameObject for the controls")]
         public GameObject ControlImage;
@@ -47,6 +51,11 @@ namespace Unity.FPS.UI
 
             MenuRoot.SetActive(false);
 
+            // m_PlayerInputsHandler.InvertYAxis set based on the value of the toggle
+            InvertYAxisToggle.isOn = m_PlayerInputsHandler.InvertYAxis;
+            InvertYAxisToggle.onValueChanged.AddListener(OnInvertYAxisChanged);
+            
+            
             LookSensitivitySlider.value = m_PlayerInputsHandler.LookSensitivity;
             LookSensitivitySlider.onValueChanged.AddListener(OnMouseSensitivityChanged);
 
@@ -59,6 +68,8 @@ namespace Unity.FPS.UI
             FramerateToggle.isOn = m_FramerateCounter.UIText.gameObject.activeSelf;
             FramerateToggle.onValueChanged.AddListener(OnFramerateCounterChanged);
         }
+
+        
 
         void Update()
         {
@@ -124,6 +135,12 @@ namespace Unity.FPS.UI
                 AudioUtility.SetMasterVolume(1);
             }
 
+        }
+        
+        private void OnInvertYAxisChanged(bool arg0)
+        {
+            // m_PlayerInputsHandler.InvertYAxis set based on the value of the toggle
+            m_PlayerInputsHandler.InvertYAxis = arg0;
         }
 
         void OnMouseSensitivityChanged(float newValue)
