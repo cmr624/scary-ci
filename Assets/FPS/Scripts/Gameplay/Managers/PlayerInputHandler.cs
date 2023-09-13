@@ -236,8 +236,10 @@ namespace Unity.FPS.Gameplay
                 bool isGamepad = Input.GetAxis(stickInputName) != 0f;
                 float i = isGamepad ? Input.GetAxis(stickInputName) : Input.GetAxisRaw(mouseInputName);
 
+                
+                // TODO INVESTIGATE, this seems to also affect horizontal input
                 // handle inverting vertical input
-                if (InvertYAxis)
+                if (InvertYAxis && mouseInputName == GameConstants.k_MouseAxisNameVertical)
                     i *= -1f;
 
                 // apply sensitivity multiplier
