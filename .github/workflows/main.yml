@@ -124,6 +124,14 @@ jobs:
           itchGameId: ${{ env.ITCH_GAME_ID }}
           buildChannel: ${{ matrix.channel }}
           buildNumber: ${{ needs.version.outputs.version_hash }}
+      - uses: "Ilshidur/action-discord@0.3.2"
+        with:
+          name: "Discord Notification"
+          env:
+            DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          with:
+            args: "The project {{ EVENT_PAYLOAD.repository.full_name }} has been built and successfully deployed to itch. See link: https://{{ env.ITCH_USERNAME }}.itch.io/{{ env.ITCH_GAME_ID }}"
+
   # deployPages:
   #   needs: build
   #   name: Deploy to Github Pages 🚀

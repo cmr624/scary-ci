@@ -12,7 +12,7 @@ namespace Unity.FPS.Game
         public CanvasGroup EndGameFadeCanvasGroup;
 
         [Header("Win")] [Tooltip("This string has to be the name of the scene you want to load when winning")]
-        public string WinSceneName = "WinScene";
+        public string WinSceneName = "MainScene";
 
         [Tooltip("Duration of delay before the fade-to-black, if winning")]
         public float DelayBeforeFadeToBlack = 4f;
