@@ -116,12 +116,12 @@ jobs:
     steps:
       - uses: actions/download-artifact@v2.0.8
         with:
-          name: build_WebGL
+          name: build_${{matrix.channel}}
           path: build 
       - uses: KikimoraGames/itch-publish@v0.0.3
         with:
           butlerApiKey: ${{ secrets.BUTLER_API_KEY }}
-          gameData: build/WebGL
+          gameData: build/${{matrix.channel}}
           itchUsername: ${{env.ITCH_USERNAME}}
           itchGameId: ${{ env.ITCH_GAME_ID }}
           buildChannel: ${{ matrix.channel }}
