@@ -7,6 +7,8 @@ env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
   ITCH_USERNAME: carlos-michael
   ITCH_GAME_ID: scary-jam
+  DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+
 jobs:
   checklicense:
     name: check if UNITY_LICENSE is set in github secrets
@@ -127,10 +129,7 @@ jobs:
       - uses: "Ilshidur/action-discord@0.3.2"
         with:
           name: "Discord Notification"
-          env:
-            DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-          with:
-            args: "The project {{ EVENT_PAYLOAD.repository.full_name }} has been built and successfully deployed to itch. See link: https://{{ env.ITCH_USERNAME }}.itch.io/{{ env.ITCH_GAME_ID }}"
+  
 
   # deployPages:
   #   needs: build
