@@ -10033,16 +10033,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b4f98e62f1d104f8658bba08e5d56f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartingWeapons:
-  - {fileID: 8323776800172828795, guid: 3439b4874b7b44e4eb2216314c46b85c, type: 3}
-  - {fileID: 8323776800172828795, guid: 31d97e822763d1f4cb769f7e3f7f7333, type: 3}
+  StartingWeapons: []
   WeaponCamera: {fileID: 3949236509504717807}
   WeaponParentSocket: {fileID: 2267353520989370969}
   DefaultWeaponPosition: {fileID: 1521062164097490266}
   AimingWeaponPosition: {fileID: 8848969164158386781}
   DownWeaponPosition: {fileID: 3819809016622212353}
-  BobFrequency: 10
-  BobSharpness: 10
+  BobFrequency: 3
+  BobSharpness: 3
   DefaultBobAmount: 0.05
   AimingBobAmount: 0.02
   RecoilSharpness: 50
@@ -10307,7 +10305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8534e17a0f90604c9afd4f5c73d829f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Id: d7451d59-f294-42c9-8515-7a4ecbf272a2
+  m_Id: e5bf0328-9cb4-4d9b-9e50-baabe7d21e0f
 --- !u!1 &5612696723711239594
 GameObject:
   m_ObjectHideFlags: 0
