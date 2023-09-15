@@ -1,4 +1,5 @@
-﻿using Unity.FPS.Game;
+﻿using System;
+using Unity.FPS.Game;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -433,6 +434,9 @@ namespace Unity.FPS.Gameplay
                 m_Actor.AimPoint.transform.localPosition = m_Controller.center;
             }
         }
+
+
+        
 
         // returns false if there was an obstruction
         bool SetCrouchingState(bool crouched, bool ignoreObstructions)
