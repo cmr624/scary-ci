@@ -93,6 +93,8 @@ namespace Unity.FPS.Gameplay
         WeaponSwitchState m_WeaponSwitchState;
         int m_WeaponSwitchNewWeaponIndex;
 
+        private Camera m_PlayerCamera;
+
         void Start()
         {
             ActiveWeaponIndex = -1;
@@ -117,6 +119,8 @@ namespace Unity.FPS.Gameplay
             }
 
             SwitchWeapon(true);
+
+            m_PlayerCamera = m_PlayerCharacterController.PlayerCamera;
         }
 
         void Update()
@@ -201,6 +205,8 @@ namespace Unity.FPS.Gameplay
             // Set final weapon socket position based on all the combined animation influences
             WeaponParentSocket.localPosition =
                 m_WeaponMainLocalPosition + m_WeaponBobLocalPosition + m_WeaponRecoilLocalPosition;
+           // m_PlayerCamera.transform.localPosition +=
+            //     m_WeaponBobLocalPosition;
         }
 
         // Sets the FOV of the main camera and the weapon camera simultaneously
