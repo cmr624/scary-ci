@@ -8,7 +8,7 @@ env:
   ITCH_USERNAME: carlos-michael
   ITCH_GAME_ID: scary-jam
   DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-  WEBHOOK_ID: github-scary
+  WEBHOOK_ID: builds-scary
 
 jobs:
   checklicense:
