@@ -107,9 +107,9 @@ jobs:
       fail-fast: true
       matrix:
         channel:
-          - windows
-          - webgl
-          - mac
+          - StandaloneOSX # Build a macOS standalone (Intel 64-bit).
+          - StandaloneWindows64 # Build a Windows 64-bit standalone.
+          - WebGL 
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     name: Deploy - Itch.io ${{ matrix.template }}
