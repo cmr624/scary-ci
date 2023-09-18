@@ -8,7 +8,7 @@ env:
   ITCH_USERNAME: carlos-michael
   ITCH_GAME_ID: scary-jam
   DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-  WEBHOOK_ID: github-scary
+  WEBHOOK_ID: builds-scary
 
 jobs:
   checklicense:
@@ -118,7 +118,7 @@ jobs:
         with:
           webhook_id: ${{ env.WEBHOOK_ID }}
           webhook_token: ${{ env.DISCORD_WEBHOOK }}
-          message: The ${{ github.event_name }} event triggered first step.    
+          message: ${{ matrix.targetPlatform }} build deployed to https://carlos-michael.itch.io/scary-jam
       # - name: Discord Notification
       #   if: github.ref == 'refs/heads/main'
       #   uses: "Ilshidur/action-discord@0.3.2"
