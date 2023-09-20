@@ -37,15 +37,9 @@ public class SuitResourceManager : MonoBehaviour
                 UpdateUIBar(resource.UiBar, newValue, resource.MaxValue);
             });
 
-            AddIntervalEffect(resource.Name, -1.0f, resource.MaxValue, Mathf.Infinity);
-            if (resource.Name == "Oxygen")
-            {
-                AddIntervalEffect(resource.Name, -5.0f, resource.MaxValue, Mathf.Infinity);
-            }
+            //AddIntervalEffect(resource.Name, -1.0f, resource.MaxValue, Mathf.Infinity);
+
         }
-
-
-
     }
 
     /// <summary>
@@ -74,7 +68,7 @@ public class SuitResourceManager : MonoBehaviour
     private IEnumerator IntervalEffectCoroutine(string resourceName, float rate, float maxValue, float duration)
     {
         float elapsed = 0;
-        var resource = suitResources.Find(r => r.Name == resourceName);
+        var resource = FindResourceByName(resourceName);
         if (resource == null)
         {
             Debug.LogWarning($"Resource {resourceName} not found.");
@@ -84,7 +78,13 @@ public class SuitResourceManager : MonoBehaviour
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
+            // once the duration is over, clamp the value 0-1
             float newValue = Mathf.Clamp(resource.ResourceValue.Value + rate * Time.deltaTime, 0, maxValue);
+            // if newValue = zero, end the effect
+            if (newValue == 0)
+            {
+                yield break;
+            }
             resource.ResourceValue.Value = newValue;
             yield return null;
         }

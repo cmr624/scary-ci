@@ -16,22 +16,31 @@ public class SuitResourceModifier : MonoBehaviour
    private PlayerCharacterController playerCharacterController;
    // agility: affect agilitySpeedModifier in PlayerCharacterController
    private SuitResource agilityResource;
-   private void Awake()
-   {
-   }
-
+   private SuitResource oxygenResource;
+   
+   [SerializeField] private float GlobalOxygenDecayRate = -1.0f;
    private void Start()
    {
        playerCharacterController = GetComponent<PlayerCharacterController>(); 
        agilityResource = suitResourceManager.FindResourceByName("Agility");
+       oxygenResource = suitResourceManager.FindResourceByName("Oxygen");
        if(agilityResource != null)
        {
            // Subscribe to agility resource changes
            agilityResource.ResourceValue.Subscribe(UpdateAgility);
        }
+       
+       if (oxygenResource!=null)
+       {
+           //add a global gameplay decay effect to oxygen
+           suitResourceManager.AddIntervalEffect(oxygenResource.Name, GlobalOxygenDecayRate, oxygenResource.MaxValue, Mathf.Infinity);
+           
+       }
 
    }
 
+   
+   
    private void UpdateAgility(float newAgilityValue)
    {
        // normalize the agility value to 0-1
