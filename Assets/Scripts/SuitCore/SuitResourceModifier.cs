@@ -28,13 +28,14 @@ public class SuitResourceModifier : MonoBehaviour
        {
            // Subscribe to agility resource changes
            agilityResource.ResourceValue.Subscribe(UpdateAgility);
+           // also use global oxygen decay rate for agility
+           suitResourceManager.AddIntervalEffect(agilityResource.Name, GlobalOxygenDecayRate, agilityResource.MaxValue, Mathf.Infinity);
        }
        
        if (oxygenResource!=null)
        {
            //add a global gameplay decay effect to oxygen
            suitResourceManager.AddIntervalEffect(oxygenResource.Name, GlobalOxygenDecayRate, oxygenResource.MaxValue, Mathf.Infinity);
-           
        }
 
    }
