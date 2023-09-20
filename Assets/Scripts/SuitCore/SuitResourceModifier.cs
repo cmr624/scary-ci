@@ -52,4 +52,7 @@ public class SuitResourceModifier : MonoBehaviour
    }
 
    // oxygen: affect weapon sway in PlayerWeaponsManager
+   // create a modifier based on the oxygen resource that affects weapon sway, the less oxygen you have, the more sway
+   // or, tbd, based on direction
+   
 }
