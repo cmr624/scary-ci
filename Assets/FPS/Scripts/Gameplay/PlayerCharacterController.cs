@@ -311,7 +311,6 @@ namespace Unity.FPS.Gameplay
 
                 float speedModifier = isSprinting ? SprintSpeedModifier : 1f;
                 speedModifier *= AgilitySpeedMultiplier; // Multiply by the agility multiplier
-                Debug.Log(speedModifier);
                 // converts move input to a worldspace vector based on our character's transform orientation
                 Vector3 worldspaceMoveInput = transform.TransformVector(m_InputHandler.GetMoveInput());
 

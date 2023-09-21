@@ -112,7 +112,6 @@ jobs:
           itchGameId: ${{ env.ITCH_GAME_ID }}
           buildChannel: ${{ matrix.targetPlatform }}
           buildNumber: ${{ needs.version.outputs.version_hash }}
-
       - name: send message
         uses: appleboy/discord-action@master
         with:
