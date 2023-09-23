@@ -148,21 +148,21 @@ MonoBehaviour:
   WeaponName: Shotgun
   WeaponIcon: {fileID: 21300000, guid: 8cbb10368086f014a8b7fc8932e7f436, type: 3}
   CrosshairDataDefault:
-    CrosshairSprite: {fileID: 21300000, guid: 2962952d6e5ae7342a298d45a3945069, type: 3}
-    CrosshairSize: 40
-    CrosshairColor: {r: 0.4292453, g: 0.8855148, b: 1, a: 0.41960785}
+    CrosshairSprite: {fileID: 21300000, guid: 1614486eace4a465890db87521dd6720, type: 3}
+    CrosshairSize: 100
+    CrosshairColor: {r: 1, g: 1, b: 1, a: 1}
   CrosshairDataTargetInSight:
-    CrosshairSprite: {fileID: 21300000, guid: 2962952d6e5ae7342a298d45a3945069, type: 3}
-    CrosshairSize: 30
-    CrosshairColor: {r: 0, g: 0.64177275, b: 1, a: 1}
+    CrosshairSprite: {fileID: 21300000, guid: 1614486eace4a465890db87521dd6720, type: 3}
+    CrosshairSize: 80
+    CrosshairColor: {r: 1, g: 1, b: 1, a: 1}
   WeaponRoot: {fileID: 1505447205160222267}
   WeaponMuzzle: {fileID: 8334323006752503713}
   ShootType: 0
   ProjectilePrefab: {fileID: 8924682559891268397, guid: f05c7e6fbbfbe824388456bb4abff9d4,
     type: 3}
   DelayBetweenShots: 0.2
-  BulletSpreadAngle: 7
-  BulletsPerShot: 24
+  BulletSpreadAngle: 0
+  BulletsPerShot: 1
   RecoilForce: 1
   AimZoomRatio: 0.7
   AimOffset: {x: 0, y: 0.13, z: 0}

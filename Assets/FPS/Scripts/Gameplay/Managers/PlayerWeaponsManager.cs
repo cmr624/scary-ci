@@ -313,6 +313,15 @@ namespace Unity.FPS.Gameplay
         // Updates the weapon bob animation based on character speed
         void UpdateWeaponBob()
         {
+            float lerpSpeed = 5.0f; // The speed at which to lerp the weapon bob to zero
+
+            if (m_InputHandler.GetHoldBreathInputHeld())
+            {
+                // If "hold breath" is active, smoothly lerp the bobbing effect to zero
+                m_WeaponBobLocalPosition.x = Mathf.Lerp(m_WeaponBobLocalPosition.x, 0, Time.deltaTime * lerpSpeed);
+                m_WeaponBobLocalPosition.y = Mathf.Lerp(m_WeaponBobLocalPosition.y, 0, Time.deltaTime * lerpSpeed);
+                return;
+            }
             if (Time.deltaTime > 0f)
             {
                 Vector3 playerCharacterVelocity =

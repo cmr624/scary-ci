@@ -18,12 +18,21 @@ public class SuitResourceModifier : MonoBehaviour
    private SuitResource agilityResource;
    private SuitResource oxygenResource;
    
+   [Header("Breath Holding")]
+   public AnimationCurve oxygenDepletionCurve;// = new AnimationCurve(new Keyframe(0f, 1f), new Keyframe(1f, 9f));
+   private float breathHoldStartTime;
+   
    [SerializeField] private float GlobalOxygenDecayRate = -1.0f;
+   
+   private PlayerInputHandler playerInputHandler;
    private void Start()
    {
+       playerInputHandler = GetComponent<PlayerInputHandler>();
        playerCharacterController = GetComponent<PlayerCharacterController>(); 
        agilityResource = suitResourceManager.FindResourceByName("Agility");
        oxygenResource = suitResourceManager.FindResourceByName("Oxygen");
+       oxygenDepletionCurve = new AnimationCurve(new Keyframe(0f, 1f), new Keyframe(1f, 9f));
+
        if(agilityResource != null)
        {
            // Subscribe to agility resource changes
@@ -40,8 +49,14 @@ public class SuitResourceModifier : MonoBehaviour
 
    }
 
-   
-   
+
+   private void Update()
+   {
+       UpdateOxygenLevel();
+   }
+
+
+
    private void UpdateAgility(float newAgilityValue)
    {
        // normalize the agility value to 0-1
@@ -55,5 +70,15 @@ public class SuitResourceModifier : MonoBehaviour
    // oxygen: affect weapon sway in PlayerWeaponsManager
    // create a modifier based on the oxygen resource that affects weapon sway, the less oxygen you have, the more sway
    // or, tbd, based on direction
-   
+   private void UpdateOxygenLevel()
+   {
+       if (playerInputHandler.GetHoldBreathInputHeld())
+       {
+           float elapsedTime = Time.time - breathHoldStartTime;
+           float depletionRate = oxygenDepletionCurve.Evaluate(elapsedTime);
+           float newOxygenValue = oxygenResource.ResourceValue.Value - (depletionRate * Time.deltaTime);
+           oxygenResource.ResourceValue.Value = Mathf.Max(0f, newOxygenValue);
+       }
+   }
+
 }
