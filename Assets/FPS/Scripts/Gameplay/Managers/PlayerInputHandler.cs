@@ -19,6 +19,11 @@ namespace Unity.FPS.Gameplay
 
         [Tooltip("Used to flip the horizontal input axis")]
         public bool InvertXAxis = false;
+        
+        [Tooltip("Button for holding breath to stabilize weapon")]
+        public string HoldBreathButtonName = "HoldBreath"; // You can map this button in Unity's input settings
+        bool m_HoldBreathInputWasHeld;
+
 
         GameFlowManager m_GameFlowManager;
         PlayerCharacterController m_PlayerCharacterController;
@@ -39,7 +44,18 @@ namespace Unity.FPS.Gameplay
         void LateUpdate()
         {
             m_FireInputWasHeld = GetFireInputHeld();
+            m_HoldBreathInputWasHeld = GetHoldBreathInputHeld();
         }
+        
+        public bool GetHoldBreathInputHeld()
+        {
+            if (CanProcessInput())
+            {
+                return Input.GetButton(HoldBreathButtonName);
+            }
+            return false;
+        }
+
 
         public bool CanProcessInput()
         {
