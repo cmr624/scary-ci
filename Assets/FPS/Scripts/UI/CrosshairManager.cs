@@ -8,7 +8,7 @@ namespace Unity.FPS.UI
     public class CrosshairManager : MonoBehaviour
     {
         public Image CrosshairImage;
-        public Sprite NullCrosshairSprite;
+        public Image NullCrosshairSprite;
         public float CrosshairUpdateshrpness = 5f;
 
         PlayerWeaponsManager m_WeaponsManager;
@@ -75,7 +75,7 @@ namespace Unity.FPS.UI
             {
                 if (NullCrosshairSprite)
                 {
-                    CrosshairImage.sprite = NullCrosshairSprite;
+                    CrosshairImage = NullCrosshairSprite;
                 }
                 else
                 {
