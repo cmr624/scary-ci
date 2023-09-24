@@ -176,6 +176,14 @@ namespace Unity.FPS.Gameplay
             return false;
         }
 
+        public bool GetInteractButtonDown()
+        {
+            if (CanProcessInput()) {
+                return Input.GetButton(GameConstants.k_ButtonInteract);
+            }
+            return false;
+        }
+
         public int GetSwitchWeaponInput()
         {
             if (CanProcessInput())
