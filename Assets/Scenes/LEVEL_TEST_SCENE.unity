@@ -33779,7 +33779,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 24.800049, y: -246.40002}
+  m_AnchoredPosition: {x: 24.800049, y: -272.3}
   m_SizeDelta: {x: 80.706, y: 198.9782}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &1894280766
@@ -61047,16 +61047,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b4f98e62f1d104f8658bba08e5d56f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartingWeapons: []
+  StartingWeapons:
+  - {fileID: 8323776800172828795, guid: 31d97e822763d1f4cb769f7e3f7f7333, type: 3}
   WeaponCamera: {fileID: 4204578337510974491}
   WeaponParentSocket: {fileID: 1432261321010830765}
   DefaultWeaponPosition: {fileID: 1841072762710260398}
   AimingWeaponPosition: {fileID: 8528395496428365225}
   DownWeaponPosition: {fileID: 4149389865222750965}
   BobFrequency: 3
-  BobSharpness: 3
-  DefaultBobAmount: 0.05
-  AimingBobAmount: 0.02
+  BobSharpness: 10
+  DefaultBobAmount: 0.3
+  AimingBobAmount: 0.1
   RecoilSharpness: 50
   MaxRecoilDistance: 0.2
   RecoilRestitutionSharpness: 10
@@ -113060,6 +113061,7 @@ MonoBehaviour:
   TriggerAxisThreshold: 0.4
   InvertYAxis: 0
   InvertXAxis: 0
+  HoldBreathButtonName: HoldBreath
 --- !u!1 &8151079539992833590
 GameObject:
   m_ObjectHideFlags: 0
@@ -113158,6 +113160,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   suitResourceManager: {fileID: 8073978906825032893}
   agilityCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  oxygenDepletionCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
