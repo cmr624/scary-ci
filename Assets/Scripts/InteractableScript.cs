@@ -17,6 +17,8 @@ namespace Unity.FPS.Gameplay
         string m_textToDisplay;
 
         DialogueManager m_dialogueManager;
+        
+        
 
         // Start is called before the first frame update
         void Start()

@@ -21,7 +21,7 @@ namespace Unity.FPS.Gameplay
         public bool InvertXAxis = false;
         
         [Tooltip("Button for holding breath to stabilize weapon")]
-        public string HoldBreathButtonName = "HoldBreath"; // You can map this button in Unity's input settings
+        public string HoldBreathButtonName = "HoldBreath"; 
         bool m_HoldBreathInputWasHeld;
 
 
