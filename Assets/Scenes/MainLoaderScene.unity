@@ -367,5 +367,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isLoaderScene: 1
-  _sceneName: MainScene
-  _loadTime: 2
+  _sceneName: LEVEL_TEST_SCENE
+  _loadTime: 0.5
