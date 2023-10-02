@@ -15445,7 +15445,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh34916
+  m_Name: pb_Mesh29104
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22984,7 +22984,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh34978
+  m_Name: pb_Mesh29166
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -44524,6 +44524,27 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5116346862699527240, guid: 945616a4ce082408080b01464f1a34d4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5116346862699527242, guid: 945616a4ce082408080b01464f1a34d4,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 35ab4e04929f44a58b32ad7f25aa18d0,
+        type: 3}
+    - target: {fileID: 5116346862699527242, guid: 945616a4ce082408080b01464f1a34d4,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5116346862699527243, guid: 945616a4ce082408080b01464f1a34d4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.5999985
+      objectReference: {fileID: 0}
     - target: {fileID: 5116346862720416044, guid: 945616a4ce082408080b01464f1a34d4,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -44608,6 +44629,32 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5116346863184928532, guid: 945616a4ce082408080b01464f1a34d4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.9000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 5116346863184928533, guid: 945616a4ce082408080b01464f1a34d4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5116346863184928535, guid: 945616a4ce082408080b01464f1a34d4,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5116346863184928535, guid: 945616a4ce082408080b01464f1a34d4,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 931b0242d54ba40f287808b09b1571a0,
+        type: 3}
+    - target: {fileID: 5116346863184928535, guid: 945616a4ce082408080b01464f1a34d4,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7124888746756070754, guid: 945616a4ce082408080b01464f1a34d4,
         type: 3}
