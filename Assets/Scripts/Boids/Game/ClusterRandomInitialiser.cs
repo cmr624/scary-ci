@@ -2,6 +2,10 @@ using UnityEngine;
 
 namespace Winch.Boids
 {
+    //TODO:
+    //control boid game objects from outside cluster in another script (not this)
+    //Test add / remove boids
+    //be able to shoot and kill boids
     internal class ClusterRandomInitialiser : MonoBehaviour
     {
         [SerializeField]
