@@ -23,9 +23,6 @@ namespace Winch.Boids
         [Header("Debugging")]
         public bool DrawAccelerationRays;
 
-        [SerializeField]
-        private GameObject m_boidPrefab;
-
         private List<Boid> m_boids = new();
 
         private BoidRuleAlignment m_alignment = new();
@@ -34,39 +31,26 @@ namespace Winch.Boids
         private BoidRuleBoundary m_boundary = new();
         private BoidRuleSeek m_seek = new();
 
-        private Dictionary<Boid, GameObject> m_boidObjects = new();
         private Dictionary<Boid, BoidRuleNoise> m_noises = new();
 
         public Boid Add(Vector3 startingPosition, Vector3 startingVelocity)
         {
-            GameObject boidGameObject = Instantiate(m_boidPrefab, transform);
             Boid boid = new();
-
-            boid.Position.Subscribe(position => boidGameObject.transform.localPosition = position);
-            boid.Velocity.Subscribe(velocity => boidGameObject.transform.forward = velocity.normalized);
 
             boid.Position.Value = startingPosition;
             boid.Velocity.Value = startingVelocity;
 
             m_boids.Add(boid);
 
-            m_boidObjects[boid] = boidGameObject;
             m_noises[boid] = new BoidRuleNoise(NoiseChangeTime);
 
             return boid;
-        }
-
-        public GameObject GetGameObject(Boid boid)
-        {
-            return m_boidObjects[boid];
         }
 
         public void Remove(Boid boid)
         {
             m_boids.Remove(boid);
             m_noises.Remove(boid);
-            GameObject boidObject = m_boidObjects[boid];
-            Destroy(boidObject);
         }
 
         public void UpdateCluster(float time)
@@ -103,7 +87,8 @@ namespace Winch.Boids
 
                 if (Target != null)
                 {
-                    Vector3 targetLocalPosition = transform.InverseTransformVector(Target.position);
+                    Vector3 targetLocalPosition = transform.InverseTransformPoint(Target.position);
+
                     Vector3 seekAcceleration = SeekWeight * m_seek.CalculateAcceleration(boid.Position.Value, targetLocalPosition);
 
                     if (DrawAccelerationRays)
