@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11453,6 +11453,11 @@ PrefabInstance:
       propertyPath: Boundaries.z
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 714330344917492441, guid: c0051b7bbe07361428c99d4d70c1426b,
+        type: 3}
+      propertyPath: AvoidanceRange
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 714330344917492442, guid: c0051b7bbe07361428c99d4d70c1426b,
         type: 3}
       propertyPath: m_Name
@@ -11463,6 +11468,11 @@ PrefabInstance:
       propertyPath: m_target
       value: 
       objectReference: {fileID: 23951447}
+    - target: {fileID: 8197738477771402243, guid: c0051b7bbe07361428c99d4d70c1426b,
+        type: 3}
+      propertyPath: m_numBoids
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 8197738477771402243, guid: c0051b7bbe07361428c99d4d70c1426b,
         type: 3}
       propertyPath: m_detectRange
