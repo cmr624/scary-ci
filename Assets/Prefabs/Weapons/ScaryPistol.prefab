@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 2225486910712267856}
   - component: {fileID: 8323776800172828795}
   - component: {fileID: 8090847488450120274}
+  - component: {fileID: 5879712918297590361}
   m_Layer: 10
   m_Name: ScaryPistol
   m_TagString: Untagged
@@ -174,14 +175,14 @@ MonoBehaviour:
   EjectionPort: {fileID: 0}
   ShellCasingEjectionForce: 2
   ShellPoolSize: 1
-  AmmoReloadRate: 1.1
-  AmmoReloadDelay: 1
+  AmmoReloadRate: 0
+  AmmoReloadDelay: 0
   MaxAmmo: 8
   AutomaticReleaseOnCharged: 0
   MaxChargeDuration: 1
   AmmoUsedOnStartCharge: 0
   AmmoUsageRateWhileCharging: 1
-  WeaponAnimator: {fileID: 0}
+  WeaponAnimator: {fileID: 5879712918297590361}
   MuzzleFlashPrefab: {fileID: 748781637555137343, guid: 3f5b545b9a1e74c418b061bba5bb9e2c,
     type: 3}
   UnparentMuzzleFlash: 0
@@ -288,6 +289,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &5879712918297590361
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2225486910712267859}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 29ddbba62c3934f58b7cc4e652848c4f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &2867801751256125023
 GameObject:
   m_ObjectHideFlags: 0
