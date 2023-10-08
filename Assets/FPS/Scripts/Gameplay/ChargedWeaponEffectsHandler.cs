@@ -1,9 +1,11 @@
-﻿using Unity.FPS.Game;
+﻿using FMODUnity;
+using ScaryJam.Audio;
+using Unity.FPS.Game;
 using UnityEngine;
 
 namespace Unity.FPS.Gameplay
 {
-    [RequireComponent(typeof(AudioSource))]
+    // [RequireComponent(typeof(AudioSource))]
     public class ChargedWeaponEffectsHandler : MonoBehaviour
     {
         [Header("Visual")] [Tooltip("Object that will be affected by charging scale & color changes")]
@@ -33,10 +35,10 @@ namespace Unity.FPS.Gameplay
         public MinMaxFloat SpinningSpeed;
 
         [Header("Sound")] [Tooltip("Audio clip for charge SFX")]
-        public AudioClip ChargeSound;
+        public EventReference ChargeSound;
 
         [Tooltip("Sound played in loop after the change is full for this weapon")]
-        public AudioClip LoopChargeWeaponSfx;
+        public EventReference LoopChargeWeaponSfx;
 
         [Tooltip("Duration of the cross fade between the charge and the loop sound")]
         public float FadeLoopDuration = 0.5f;
@@ -54,8 +56,8 @@ namespace Unity.FPS.Gameplay
         WeaponController m_WeaponController;
         ParticleSystem.VelocityOverLifetimeModule m_VelocityOverTimeModule;
 
-        AudioSource m_AudioSource;
-        AudioSource m_AudioSourceLoop;
+        /*AudioSource m_AudioSource;
+        AudioSource m_AudioSourceLoop;*/
 
         float m_LastChargeTriggerTimestamp;
         float m_ChargeRatio;
@@ -66,19 +68,19 @@ namespace Unity.FPS.Gameplay
             m_LastChargeTriggerTimestamp = 0.0f;
 
             // The charge effect needs it's own AudioSources, since it will play on top of the other gun sounds
-            m_AudioSource = gameObject.AddComponent<AudioSource>();
+            /*m_AudioSource = gameObject.AddComponent<AudioSource>();
             m_AudioSource.clip = ChargeSound;
             m_AudioSource.playOnAwake = false;
             m_AudioSource.outputAudioMixerGroup =
-                AudioUtility.GetAudioGroup(AudioUtility.AudioGroups.WeaponChargeBuildup);
+                AudioUtility.GetAudioGroup(AudioUtility.AudioGroups.WeaponChargeBuildup);*/
 
             // create a second audio source, to play the sound with a delay
-            m_AudioSourceLoop = gameObject.AddComponent<AudioSource>();
+            /*m_AudioSourceLoop = gameObject.AddComponent<AudioSource>();
             m_AudioSourceLoop.clip = LoopChargeWeaponSfx;
             m_AudioSourceLoop.playOnAwake = false;
             m_AudioSourceLoop.loop = true;
             m_AudioSourceLoop.outputAudioMixerGroup =
-                AudioUtility.GetAudioGroup(AudioUtility.AudioGroups.WeaponChargeLoop);
+                AudioUtility.GetAudioGroup(AudioUtility.AudioGroups.WeaponChargeLoop);*/
         }
 
         void SpawnParticleSystem()
@@ -124,20 +126,21 @@ namespace Unity.FPS.Gameplay
             // update sound's volume and pitch 
             if (m_ChargeRatio > 0)
             {
-                if (!m_AudioSourceLoop.isPlaying &&
-                    m_WeaponController.LastChargeTriggerTimestamp > m_LastChargeTriggerTimestamp)
+                // if (!m_AudioSourceLoop.isPlaying &&
+                if (m_WeaponController.LastChargeTriggerTimestamp > m_LastChargeTriggerTimestamp)
                 {
                     m_LastChargeTriggerTimestamp = m_WeaponController.LastChargeTriggerTimestamp;
                     if (!UseProceduralPitchOnLoopSfx)
                     {
-                        m_EndchargeTime = Time.time + ChargeSound.length;
-                        m_AudioSource.Play();
+                        m_EndchargeTime = Time.time; // + ChargeSound.length;
+                        // m_AudioSource.Play();
+                        SfxAudioEventDriver.PlayClip(ChargeSound);
                     }
 
-                    m_AudioSourceLoop.Play();
+                    // m_AudioSourceLoop.Play();
                 }
 
-                if (!UseProceduralPitchOnLoopSfx)
+                /*if (!UseProceduralPitchOnLoopSfx)
                 {
                     float volumeRatio =
                         Mathf.Clamp01((m_EndchargeTime - Time.time - FadeLoopDuration) / FadeLoopDuration);
@@ -147,13 +150,13 @@ namespace Unity.FPS.Gameplay
                 else
                 {
                     m_AudioSourceLoop.pitch = Mathf.Lerp(1.0f, MaxProceduralPitchValue, m_ChargeRatio);
-                }
+                }*/
             }
-            else
+            /*else
             {
                 m_AudioSource.Stop();
                 m_AudioSourceLoop.Stop();
-            }
+            }*/
         }
     }
 }

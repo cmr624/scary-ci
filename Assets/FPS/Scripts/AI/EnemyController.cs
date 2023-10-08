@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using FMODUnity;
+using ScaryJam.Audio;
 using Unity.FPS.Game;
 using UnityEngine;
 using UnityEngine.AI;
@@ -61,7 +63,7 @@ namespace Unity.FPS.AI
         public float FlashOnHitDuration = 0.5f;
 
         [Header("Sounds")] [Tooltip("Sound played when recieving damages")]
-        public AudioClip DamageTick;
+        public EventReference DamageTick;
 
         [Header("VFX")] [Tooltip("The VFX prefab spawned when the enemy dies")]
         public GameObject DeathVfx;
@@ -350,8 +352,10 @@ namespace Unity.FPS.AI
                 m_LastTimeDamaged = Time.time;
             
                 // play the damage tick sound
-                if (DamageTick && !m_WasDamagedThisFrame)
-                    AudioUtility.CreateSFX(DamageTick, transform.position, AudioUtility.AudioGroups.DamageTick, 0f);
+                // if (DamageTick && !m_WasDamagedThisFrame)
+                if (!m_WasDamagedThisFrame)
+                    SfxAudioEventDriver.PlayClip(DamageTick, gameObject);
+                    // AudioUtility.CreateSFX(DamageTick, transform.position, AudioUtility.AudioGroups.DamageTick, 0f);
             
                 m_WasDamagedThisFrame = true;
             }
