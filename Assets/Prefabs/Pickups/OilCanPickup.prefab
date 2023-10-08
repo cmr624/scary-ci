@@ -89,7 +89,7 @@ MonoBehaviour:
     Path: event:/Test Placeholder
   PickupVfxPrefab: {fileID: 7655095426451682942, guid: 358eca6adc32a89459c54b6b62d9c825,
     type: 3}
-  ResourceName: Oxygen
+  ResourceName: Agility
   AddAmount: 20
   suitResourceManager: {fileID: 0}
 --- !u!114 &8152090525677112818
