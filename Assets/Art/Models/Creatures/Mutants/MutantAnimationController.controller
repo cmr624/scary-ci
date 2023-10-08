@@ -85,7 +85,8 @@ BlendTree:
   m_Name: Blend Tree
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 0}
+    m_Motion: {fileID: 4723146814002874508, guid: f727206c4b8e74bc5b4c38c9d63c56eb,
+      type: 3}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -675,7 +676,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 8349542763059015795, guid: f727206c4b8e74bc5b4c38c9d63c56eb,
+  m_Motion: {fileID: 4723146814002874508, guid: f727206c4b8e74bc5b4c38c9d63c56eb,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -704,7 +705,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 8349542763059015795, guid: f727206c4b8e74bc5b4c38c9d63c56eb,
+  m_Motion: {fileID: 4723146814002874508, guid: f727206c4b8e74bc5b4c38c9d63c56eb,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -869,7 +870,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 8349542763059015795, guid: f727206c4b8e74bc5b4c38c9d63c56eb,
+  m_Motion: {fileID: 4723146814002874508, guid: f727206c4b8e74bc5b4c38c9d63c56eb,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -897,7 +898,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 8349542763059015795, guid: f727206c4b8e74bc5b4c38c9d63c56eb,
+  m_Motion: {fileID: 4723146814002874508, guid: f727206c4b8e74bc5b4c38c9d63c56eb,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -985,7 +986,7 @@ AnimatorStateMachine:
   m_AnyStatePosition: {x: 48, y: 72, z: 0}
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 48, y: 24, z: 0}
-  m_ParentStateMachinePosition: {x: 648, y: 120, z: 0}
+  m_ParentStateMachinePosition: {x: 650, y: 120, z: 0}
   m_DefaultState: {fileID: 1102484242482852878}
 --- !u!1107 &1107374135746289468
 AnimatorStateMachine:
@@ -1045,7 +1046,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102675819272811964}
-    m_Position: {x: 252, y: 108, z: 0}
+    m_Position: {x: 250, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102208277086009284}
     m_Position: {x: 580, y: 110, z: 0}
