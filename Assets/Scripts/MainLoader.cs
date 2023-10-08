@@ -12,11 +12,6 @@ public class MainLoader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // invoke loadscene after set amount of time
-        if (_isLoaderScene)
-        {
-            Invoke(nameof(LoadScene), _loadTime);
-        }
         
     }
 
