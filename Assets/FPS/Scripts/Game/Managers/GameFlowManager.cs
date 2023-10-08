@@ -43,7 +43,7 @@ namespace Unity.FPS.Game
 
         void Start()
         {
-            AudioUtility.SetMasterVolume(1);
+            //AudioUtility.SetMasterVolume(1);
         }
 
         void Update()
