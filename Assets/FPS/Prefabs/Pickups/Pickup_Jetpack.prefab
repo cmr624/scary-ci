@@ -29,6 +29,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2402080302446883653}
   m_Father: {fileID: 0}
@@ -78,7 +79,13 @@ MonoBehaviour:
   VerticalBobFrequency: 1
   BobbingAmount: 0.3
   RotatingSpeed: 360
-  PickupSfx: {fileID: 8300000, guid: 9c793d7183ca03e4fbf328175291cee4, type: 3}
+  PickupSfx:
+    Guid:
+      Data1: 1707181957
+      Data2: 1217544738
+      Data3: -399526991
+      Data4: 1984713962
+    Path: event:/Test Placeholder
   PickupVfxPrefab: {fileID: 0}
 --- !u!1001 &2402080302446488005
 PrefabInstance:
@@ -90,6 +97,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 8a8f77597c6be5e429a0dde1309ab87d, type: 3}
       propertyPath: m_Name
       value: Mesh_Jetpack
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8a8f77597c6be5e429a0dde1309ab87d, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8a8f77597c6be5e429a0dde1309ab87d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -104,6 +115,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8a8f77597c6be5e429a0dde1309ab87d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8a8f77597c6be5e429a0dde1309ab87d, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.000000021855694
       objectReference: {fileID: 0}
@@ -114,14 +129,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 8a8f77597c6be5e429a0dde1309ab87d, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 8a8f77597c6be5e429a0dde1309ab87d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 8a8f77597c6be5e429a0dde1309ab87d, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8a8f77597c6be5e429a0dde1309ab87d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

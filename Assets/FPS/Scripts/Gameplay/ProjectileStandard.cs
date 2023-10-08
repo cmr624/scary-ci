@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using FMODUnity;
+using ScaryJam.Audio;
 using Unity.FPS.Game;
 using UnityEngine;
 
@@ -28,7 +30,7 @@ namespace Unity.FPS.Gameplay
         public float ImpactVfxSpawnOffset = 0.1f;
 
         [Tooltip("Clip to play on impact")] 
-        public AudioClip ImpactSfxClip;
+        public EventReference ImpactSfxClip;
 
         [Tooltip("Layers this projectile can collide with")]
         public LayerMask HittableLayers = -1;
@@ -251,10 +253,12 @@ namespace Unity.FPS.Gameplay
             }
 
             // impact sfx
-            if (ImpactSfxClip)
+            /*if (ImpactSfxClip)
             {
                 AudioUtility.CreateSFX(ImpactSfxClip, point, AudioUtility.AudioGroups.Impact, 1f, 3f);
-            }
+            }*/
+            
+            SfxAudioEventDriver.PlayClip(ImpactSfxClip, collider.gameObject);
 
             // Self Destruct
             Destroy(this.gameObject);

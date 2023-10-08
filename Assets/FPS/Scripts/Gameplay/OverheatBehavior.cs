@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using FMODUnity;
+using ScaryJam.Audio;
 using Unity.FPS.Game;
 
 namespace Unity.FPS.Gameplay
@@ -33,7 +35,7 @@ namespace Unity.FPS.Gameplay
         public Material OverheatingMaterial;
 
         [Header("Sound")] [Tooltip("Sound played when a cell are cooling")]
-        public AudioClip CoolingCellsSound;
+        public EventReference CoolingCellsSound;
 
         [Tooltip("Curve for ammo to volume ratio")]
         public AnimationCurve AmmoToVolumeRatioCurve;
@@ -67,9 +69,9 @@ namespace Unity.FPS.Gameplay
             m_Weapon = GetComponent<WeaponController>();
             DebugUtility.HandleErrorIfNullGetComponent<WeaponController, OverheatBehavior>(m_Weapon, this, gameObject);
 
-            m_AudioSource = gameObject.AddComponent<AudioSource>();
+            /*m_AudioSource = gameObject.AddComponent<AudioSource>();
             m_AudioSource.clip = CoolingCellsSound;
-            m_AudioSource.outputAudioMixerGroup = AudioUtility.GetAudioGroup(AudioUtility.AudioGroups.WeaponOverheat);
+            m_AudioSource.outputAudioMixerGroup = AudioUtility.GetAudioGroup(AudioUtility.AudioGroups.WeaponOverheat);*/
         }
 
         void Update()
@@ -90,7 +92,7 @@ namespace Unity.FPS.Gameplay
             }
 
             // cooling sound
-            if (CoolingCellsSound)
+            /*if (CoolingCellsSound)
             {
                 if (!m_AudioSource.isPlaying
                     && currentAmmoRatio != 1
@@ -107,6 +109,13 @@ namespace Unity.FPS.Gameplay
                 }
 
                 m_AudioSource.volume = AmmoToVolumeRatioCurve.Evaluate(1 - currentAmmoRatio);
+            }*/
+            
+            if (currentAmmoRatio != 1
+                && m_Weapon.IsWeaponActive
+                && m_Weapon.IsCooling)
+            {
+                SfxAudioEventDriver.PlayClip(CoolingCellsSound);
             }
 
             m_LastAmmoRatio = currentAmmoRatio;

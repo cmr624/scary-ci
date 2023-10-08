@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using FMODUnity;
+using ScaryJam.Audio;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Unity.FPS.Game
@@ -22,7 +24,7 @@ namespace Unity.FPS.Game
         [Tooltip("Duration of delay before the win message")]
         public float DelayBeforeWinMessage = 2f;
 
-        [Tooltip("Sound played on win")] public AudioClip VictorySound;
+        [Tooltip("Sound played on win")] public EventReference VictorySound;
 
         [Header("Lose")] [Tooltip("This string has to be the name of the scene you want to load when losing")]
         public string LoseSceneName = "LoseScene";
@@ -51,7 +53,7 @@ namespace Unity.FPS.Game
                 float timeRatio = 1 - (m_TimeLoadEndGameScene - Time.time) / EndSceneLoadDelay;
                 EndGameFadeCanvasGroup.alpha = timeRatio;
 
-                AudioUtility.SetMasterVolume(1 - timeRatio);
+                // AudioUtility.SetMasterVolume(1 - timeRatio);
 
                 // See if it's time to load the end scene (after the delay)
                 if (Time.time >= m_TimeLoadEndGameScene)
@@ -80,11 +82,14 @@ namespace Unity.FPS.Game
                 m_TimeLoadEndGameScene = Time.time + EndSceneLoadDelay + DelayBeforeFadeToBlack;
 
                 // play a sound on win
-                var audioSource = gameObject.AddComponent<AudioSource>();
+                
+                SfxAudioEventDriver.PlayClip(VictorySound);
+                
+                /*var audioSource = gameObject.AddComponent<AudioSource>();
                 audioSource.clip = VictorySound;
                 audioSource.playOnAwake = false;
                 audioSource.outputAudioMixerGroup = AudioUtility.GetAudioGroup(AudioUtility.AudioGroups.HUDVictory);
-                audioSource.PlayScheduled(AudioSettings.dspTime + DelayBeforeWinMessage);
+                audioSource.PlayScheduled(AudioSettings.dspTime + DelayBeforeWinMessage);*/
 
                 // create a game message
                 //var message = Instantiate(WinGameMessagePrefab).GetComponent<DisplayMessage>();

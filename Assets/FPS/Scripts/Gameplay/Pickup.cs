@@ -1,4 +1,6 @@
-﻿using Unity.FPS.Game;
+﻿using FMODUnity;
+using ScaryJam.Audio;
+using Unity.FPS.Game;
 using UnityEngine;
 
 namespace Unity.FPS.Gameplay
@@ -14,7 +16,7 @@ namespace Unity.FPS.Gameplay
 
         [Tooltip("Rotation angle per second")] public float RotatingSpeed = 360f;
 
-        [Tooltip("Sound played on pickup")] public AudioClip PickupSfx;
+        [Tooltip("Sound played on pickup")] public EventReference PickupSfx;
         [Tooltip("VFX spawned on pickup")] public GameObject PickupVfxPrefab;
 
         public Rigidbody PickupRigidbody { get; private set; }
@@ -72,10 +74,12 @@ namespace Unity.FPS.Gameplay
             if (m_HasPlayedFeedback)
                 return;
 
-            if (PickupSfx)
+            /*if (PickupSfx)
             {
                 AudioUtility.CreateSFX(PickupSfx, transform.position, AudioUtility.AudioGroups.Pickup, 0f);
-            }
+            }*/
+            
+            SfxAudioEventDriver.PlayClip(PickupSfx, gameObject);
 
             if (PickupVfxPrefab)
             {

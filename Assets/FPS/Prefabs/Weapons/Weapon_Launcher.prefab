@@ -88,12 +88,42 @@ MonoBehaviour:
   WeaponAnimator: {fileID: 0}
   MuzzleFlashPrefab: {fileID: 0}
   UnparentMuzzleFlash: 0
-  ShootSfx: {fileID: 8300000, guid: 0cacf9e8e361eb24e9101b28422f7c08, type: 3}
-  ChangeWeaponSfx: {fileID: 8300000, guid: 6f3e0904bbbace745bdef08cdbcdfec0, type: 3}
+  ShootSfx:
+    Guid:
+      Data1: -650384519
+      Data2: 1267049943
+      Data3: -368973155
+      Data4: 25876224
+    Path: event:/Gun Shot
+  ChangeWeaponSfx:
+    Guid:
+      Data1: 1707181957
+      Data2: 1217544738
+      Data3: -399526991
+      Data4: 1984713962
+    Path: event:/Test Placeholder
   UseContinuousShootSound: 0
-  ContinuousShootStartSfx: {fileID: 0}
-  ContinuousShootLoopSfx: {fileID: 0}
-  ContinuousShootEndSfx: {fileID: 0}
+  ContinuousShootStartSfx:
+    Guid:
+      Data1: 1707181957
+      Data2: 1217544738
+      Data3: -399526991
+      Data4: 1984713962
+    Path: event:/Test Placeholder
+  ContinuousShootLoopSfx:
+    Guid:
+      Data1: 1707181957
+      Data2: 1217544738
+      Data3: -399526991
+      Data4: 1984713962
+    Path: event:/Test Placeholder
+  ContinuousShootEndSfx:
+    Guid:
+      Data1: 1707181957
+      Data2: 1217544738
+      Data3: -399526991
+      Data4: 1984713962
+    Path: event:/Test Placeholder
 --- !u!114 &1284412032582177879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,8 +172,20 @@ MonoBehaviour:
   SpinningSpeed:
     Min: 50
     Max: 1500
-  ChargeSound: {fileID: 8300000, guid: 7a0479c7c60da2d45b93a1af1afe6c1e, type: 3}
-  LoopChargeWeaponSfx: {fileID: 8300000, guid: b78fcf1f89aacdb468ce983629886f2d, type: 3}
+  ChargeSound:
+    Guid:
+      Data1: 1707181957
+      Data2: 1217544738
+      Data3: -399526991
+      Data4: 1984713962
+    Path: event:/Test Placeholder
+  LoopChargeWeaponSfx:
+    Guid:
+      Data1: 1707181957
+      Data2: 1217544738
+      Data3: -399526991
+      Data4: 1984713962
+    Path: event:/Test Placeholder
   FadeLoopDuration: 0.2
   UseProceduralPitchOnLoopSfx: 0
   MaxProceduralPitchValue: 2
@@ -191,7 +233,13 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   OverheatingMaterial: {fileID: 2100000, guid: bbfadc30c17002448a215c8857fefa7a, type: 2}
-  CoolingCellsSound: {fileID: 8300000, guid: 93331a7c9fe98494a84f18effb358899, type: 3}
+  CoolingCellsSound:
+    Guid:
+      Data1: 1707181957
+      Data2: 1217544738
+      Data3: -399526991
+      Data4: 1984713962
+    Path: event:/Test Placeholder
   AmmoToVolumeRatioCurve:
     serializedVersion: 2
     m_Curve:
@@ -232,7 +280,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2225486910712267859}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243115921504442520, guid: fcc71635aab95ff4fbdf1880bf2afa2f,
     type: 2}

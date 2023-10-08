@@ -1,7 +1,9 @@
 {
     "name": "fps.AI",
     "references": [
-        "GUID:9c5543eabb73a6249ac07b2c065ee8b4"
+        "GUID:9c5543eabb73a6249ac07b2c065ee8b4",
+        "GUID:0c752da273b17c547ae705acf0f2adf2",
+        "GUID:03c99bcd5d8a1444390bcb0b5932d1f3"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
