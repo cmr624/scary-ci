@@ -623,8 +623,20 @@ MonoBehaviour:
   CompletionDelay: 0.35
   FadeInDuration: 0.5
   FadeOutDuration: 2
-  InitSound: {fileID: 8300000, guid: 179db782f1044bc48b9dff5d487c4bef, type: 3}
-  CompletedSound: {fileID: 8300000, guid: 3f01be6994a0ab6448a945dbdd9b3cda, type: 3}
+  InitSound:
+    Guid:
+      Data1: 1707181957
+      Data2: 1217544738
+      Data3: -399526991
+      Data4: 1984713962
+    Path: event:/Test Placeholder
+  CompletedSound:
+    Guid:
+      Data1: 1707181957
+      Data2: 1217544738
+      Data3: -399526991
+      Data4: 1984713962
+    Path: event:/Test Placeholder
   MoveInDuration: 0.5
   MoveInCurve:
     serializedVersion: 2

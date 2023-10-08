@@ -1,4 +1,6 @@
-﻿using Unity.FPS.Game;
+﻿using FMODUnity;
+using ScaryJam.Audio;
+using Unity.FPS.Game;
 using UnityEngine;
 
 namespace Unity.FPS.AI
@@ -23,9 +25,9 @@ namespace Unity.FPS.AI
         public ParticleSystem[] RandomHitSparks;
 
         public ParticleSystem[] OnDetectVfx;
-        public AudioClip OnDetectSfx;
+        public EventReference OnDetectSfx;
 
-        [Header("Sound")] public AudioClip MovementSound;
+        [Header("Sound")] public EventReference MovementSound;
         public MinMaxFloat PitchDistortionMovementSpeed;
 
         public AIState AiState { get; private set; }
@@ -53,10 +55,10 @@ namespace Unity.FPS.AI
             AiState = AIState.Patrol;
 
             // adding a audio source to play the movement sound on it
-            m_AudioSource = GetComponent<AudioSource>();
+            /*m_AudioSource = GetComponent<AudioSource>();
             DebugUtility.HandleErrorIfNullGetComponent<AudioSource, EnemyMobile>(m_AudioSource, this, gameObject);
             m_AudioSource.clip = MovementSound;
-            m_AudioSource.Play();
+            m_AudioSource.Play();*/
         }
 
         void Update()
@@ -70,8 +72,8 @@ namespace Unity.FPS.AI
             Animator.SetFloat(k_AnimMoveSpeedParameter, moveSpeed);
 
             // changing the pitch of the movement sound depending on the movement speed
-            m_AudioSource.pitch = Mathf.Lerp(PitchDistortionMovementSpeed.Min, PitchDistortionMovementSpeed.Max,
-                moveSpeed / m_EnemyController.NavMeshAgent.speed);
+            /*m_AudioSource.pitch = Mathf.Lerp(PitchDistortionMovementSpeed.Min, PitchDistortionMovementSpeed.Max,
+                moveSpeed / m_EnemyController.NavMeshAgent.speed);*/
         }
 
         void UpdateAiStateTransitions()
@@ -148,10 +150,12 @@ namespace Unity.FPS.AI
                 OnDetectVfx[i].Play();
             }
 
-            if (OnDetectSfx)
+            /*if (OnDetectSfx)
             {
                 AudioUtility.CreateSFX(OnDetectSfx, transform.position, AudioUtility.AudioGroups.EnemyDetection, 1f);
-            }
+            }*/
+            
+            SfxAudioEventDriver.PlayClip(OnDetectSfx, gameObject);
 
             Animator.SetBool(k_AnimAlertedParameter, true);
         }

@@ -1,4 +1,6 @@
-﻿using Unity.FPS.Game;
+﻿using FMODUnity;
+using ScaryJam.Audio;
+using Unity.FPS.Game;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -31,10 +33,10 @@ namespace Unity.FPS.UI
         [Tooltip("Duration of the fade out")] public float FadeOutDuration = 2f;
 
         [Header("Sound")] [Tooltip("Sound that will be player on initialization")]
-        public AudioClip InitSound;
+        public EventReference InitSound;
 
         [Tooltip("Sound that will be player on completion")]
-        public AudioClip CompletedSound;
+        public EventReference CompletedSound;
 
         [Header("Movement")] [Tooltip("Time it takes to move in the screen")]
         public float MoveInDuration = 0.5f;
@@ -178,9 +180,9 @@ namespace Unity.FPS.UI
             }
         }
 
-        void PlaySound(AudioClip sound)
+        void PlaySound(EventReference sound)
         {
-            if (!sound)
+            /*if (!sound)
                 return;
 
             if (!m_AudioSource)
@@ -189,7 +191,9 @@ namespace Unity.FPS.UI
                 m_AudioSource.outputAudioMixerGroup = AudioUtility.GetAudioGroup(AudioUtility.AudioGroups.HUDObjective);
             }
 
-            m_AudioSource.PlayOneShot(sound);
+            m_AudioSource.PlayOneShot(sound);*/
+            
+            SfxAudioEventDriver.PlayClip(sound);
         }
     }
 }

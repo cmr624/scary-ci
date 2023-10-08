@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb1af23f00704fc6861fb7f8e47f40a, type: 3}
+  m_Name: SfxMap
+  m_EditorClassIdentifier: 
+  _keyValues:
+  - Action: Gunshot
+    SfxClip:
+      Guid:
+        Data1: -650384519
+        Data2: 1267049943
+        Data3: -368973155
+        Data4: 25876224
+      Path: event:/Gun Shot
+  - Action: Test
+    SfxClip:
+      Guid:
+        Data1: 1707181957
+        Data2: 1217544738
+        Data3: -399526991
+        Data4: 1984713962
+      Path: event:/Test Placeholder
