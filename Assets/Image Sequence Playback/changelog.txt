@@ -1,0 +1,9 @@
+1.8
+- Fixed a bug that caused the player to not adopt the correct FPS when playing the sequence
+
+1.7
+- New Feature: The script can now output the sequence to multiple materials / UI images at the same time
+
+1.6
+- Added Async loading functionality
+- Added Load On Awake option to the inspector
