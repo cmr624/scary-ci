@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 209b3a8fb4b6d47a09c3959dc90aac92
+guid: e6b51f1148eb044b582fe2c760a7640c
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Car_3_Material
-    second: {fileID: 2100000, guid: e7bb0cf15877246ca80cdf37ddb7b8c8, type: 2}
+      name: Cayde
+    second: {fileID: 2100000, guid: 90e3300d205fe4a79b1d8bec696928a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 17e230724ea12498d9568f541ce385ff, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
