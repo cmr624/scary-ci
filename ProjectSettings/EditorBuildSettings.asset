@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PROD/LEVEL_AZA_BOSS.unity
     guid: a28d9caf15cc54b22bfb119868b49f32
+  - enabled: 1
+    path: Assets/Scenes/PROD/LEVEL_INTERIOR1.unity
+    guid: 6cae2427ba58744158d848cd6375e53c
   m_configObjects: {}
