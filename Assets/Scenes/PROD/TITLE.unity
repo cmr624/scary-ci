@@ -905,7 +905,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 657534193}
   m_OnClick:
     m_PersistentCalls:
@@ -1053,7 +1053,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: LEVEL_EXTERIOR
+          m_StringArgument: LEVEL_INTERIOR1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &935993240
@@ -1588,7 +1588,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Exterior 2
+  m_text: Azza Boss
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1879,7 +1879,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1656282313}
   m_OnClick:
     m_PersistentCalls:
@@ -2476,7 +2476,7 @@ MonoBehaviour:
     by
 
     alex harder, alexrc, carlos, carlos michael, chris,
-    fiona, lindsay, lori,, lyndon, paul, steve, tyler
+    fiona, lindsay, lori, lyndon, paul, steve, tyler
 
 '
   m_isRightToLeft: 0
