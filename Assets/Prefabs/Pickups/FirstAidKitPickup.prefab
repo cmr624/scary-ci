@@ -9933,6 +9933,12 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -5754084199372789682, guid: a558e2ec76a934d91b7595f07ed0e2dc,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -6791539005646845248, guid: 85f984b0b84a3474f98f49ae241e8471,
+        type: 3}
     - target: {fileID: 919132149155446097, guid: a558e2ec76a934d91b7595f07ed0e2dc,
         type: 3}
       propertyPath: m_Name
