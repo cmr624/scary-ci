@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed3f3d91454db34f894abc9ea1d8ec4, type: 3}
+  m_Name: VLBConfigOverride
+  m_EditorClassIdentifier: 
+  geometryOverrideLayer: 1
+  geometryLayerID: 1
+  geometryTag: Untagged
+  geometryRenderQueue: 3000
+  geometryRenderQueueHD: 3100
+  m_RenderPipeline: 0
+  m_RenderingMode: 1
+  ditheringFactor: 0
+  useLightColorTemperature: 1
+  sharedMeshSides: 24
+  sharedMeshSegments: 5
+  hdBeamsCameraBlendingDistance: 0.5
+  urpDepthCameraScriptableRendererIndex: -1
+  globalNoiseScale: 0.5
+  globalNoiseVelocity: {x: 0.07, y: 0.18, z: 0.05}
+  fadeOutCameraTag: MainCamera
+  noiseTexture3D: {fileID: 0}
+  dustParticlesPrefab: {fileID: 0}
+  ditheringNoiseTexture: {fileID: 0}
+  jitteringNoiseTexture: {fileID: 0}
+  featureEnabledColorGradient: 1
+  featureEnabledDepthBlend: 1
+  featureEnabledNoise3D: 1
+  featureEnabledDynamicOcclusion: 1
+  featureEnabledMeshSkewing: 1
+  featureEnabledShaderAccuracyHigh: 1
+  featureEnabledShadow: 1
+  featureEnabledCookie: 1
+  m_RaymarchingQualities:
+  - name: Fast
+    stepCount: 5
+    _UniqueID: 1
+  - name: Balanced
+    stepCount: 10
+    _UniqueID: 2
+  - name: High
+    stepCount: 20
+    _UniqueID: 3
+  m_DefaultRaymarchingQualityUniqueID: 2
+  pluginVersion: 20101
+  _DummyMaterial: {fileID: 0}
+  _DummyMaterialHD: {fileID: 0}
+  _BeamShader: {fileID: 0}
+  _BeamShaderHD: {fileID: 0}

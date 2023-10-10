@@ -1,0 +1,192 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Rock_Lite
+  m_Shader: {fileID: 4800000, guid: 7e295aae9bc7c6e44b2a1231eaa712a2, type: 3}
+  m_ValidKeywords:
+  - TVE_FEATURE_DETAIL
+  m_InvalidKeywords:
+  - _DISABLE_DECALS
+  - _DISABLE_SSR
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2000
+  stringTagMap:
+    NatureRendererInstancing: true
+    RenderType: AlphaTest
+    UseExternalSettings: true
+  disabledShaderPasses:
+  - DistortionVectors
+  - TransparentBackfaceDebugDisplay
+  - TransparentDepthPrepass
+  - TransparentDepthPostpass
+  - TransparentBackface
+  - MOTIONVECTORS
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: bc5b8d0a3a0a72c40b98e45eb0fd44ea, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissiveTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainAlbedoTex:
+        m_Texture: {fileID: 2800000, guid: e2971a4f16890d3489b2f319cacbb0d2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainMaskTex:
+        m_Texture: {fileID: 2800000, guid: 4dff952b52204494fa83c12ec0c6ba03, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainNormalTex:
+        m_Texture: {fileID: 2800000, guid: bc5b8d0a3a0a72c40b98e45eb0fd44ea, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: e2971a4f16890d3489b2f319cacbb0d2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SecondAlbedoTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SecondMaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SecondNormalTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaClipValue: 0.5
+    - _BoundsRadiusValue: 1
+    - _CategoryDetail: 1
+    - _CategoryEmissive: 1
+    - _CategoryGlobals: 1
+    - _CategoryGradient: 0
+    - _CategoryMain: 1
+    - _CategoryMotion: 0
+    - _CategoryObject: 1
+    - _CategoryOcclusion: 0
+    - _CategoryRender: 1
+    - _CategorySubsurface: 0
+    - _Cutoff: 0.5
+    - _DetailAlphaMode: 1
+    - _DetailBlendMaxValue: 1
+    - _DetailBlendMinValue: 0
+    - _DetailBlendMode: 0
+    - _DetailMaskMaxValue: 0.18749997
+    - _DetailMaskMinValue: 0.073529415
+    - _DetailMaskMode: 0
+    - _DetailMeshMaxValue: 1
+    - _DetailMeshMinValue: 0
+    - _DetailMeshMode: 0
+    - _DetailMode: 1
+    - _DetailNormalValue: 1
+    - _DetailSnowMode: 0
+    - _DetailValue: 1
+    - _EmissiveFlagMode: 0
+    - _EmissiveIntensityMode: 0
+    - _EmissiveIntensityValue: 1
+    - _EmissiveTexMaxValue: 1
+    - _EmissiveTexMinValue: 0
+    - _GlobalOverlay: 0.5
+    - _HasEmissive: 1
+    - _HasGradient: 0
+    - _HasOcclusion: 1
+    - _IsCollected: 1
+    - _IsCustomShader: 0
+    - _IsIdentifier: 672
+    - _IsLiteShader: 1
+    - _IsPropShader: 1
+    - _IsShared: 0
+    - _IsStandardShader: 1
+    - _IsTVEShader: 1
+    - _IsVersion: 1100
+    - _MainAlbedoValue: 1
+    - _MainMetallicValue: 0
+    - _MainNormalValue: 1
+    - _MainOcclusionValue: 0.5
+    - _MainSmoothnessValue: 1
+    - _MessageBounds: 0
+    - _MessageMainMask: 0
+    - _MessageMotion: 0
+    - _MessageOcclusion: 0
+    - _MessageSecondMask: 0
+    - _MessageSnow: 0
+    - _MessageSubsurface: 0
+    - _OverlayProjectionValue: 1
+    - _RenderClip: 0
+    - _RenderCull: 2
+    - _RenderDecals: 0
+    - _RenderMode: 0
+    - _RenderNormals: 0
+    - _RenderPriority: 0
+    - _RenderQueue: 0
+    - _RenderSSR: 0
+    - _RenderZWrite: 1
+    - _SecondAlbedoValue: 1
+    - _SecondMetallicValue: 0
+    - _SecondNormalValue: 0
+    - _SecondOcclusionValue: 1
+    - _SecondSmoothnessValue: 1
+    - _SecondUVsMode: 0
+    - _SecondUVsScaleMode: 0
+    - _SpaceSubsurface: 0
+    - _SubsurfaceAmbientValue: 0.2
+    - _SubsurfaceAngleValue: 8
+    - _SubsurfaceDiffusion: 0
+    - _SubsurfaceDirectValue: 1
+    - _SubsurfaceNormalValue: 0
+    - _SubsurfaceScatteringValue: 2
+    - _SubsurfaceShadowValue: 1
+    - _VertexOcclusionMaskMode: 40
+    - _VertexOcclusionMaxValue: 1
+    - _VertexOcclusionMinValue: 0
+    - _VertexVariationMode: 0
+    - __dirty: 1
+    - _emissive_intensity_value: 1
+    - _render_coverage: 0
+    - _render_cull: 2
+    - _render_dst: 0
+    - _render_src: 1
+    - _render_zw: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DetailBlendRemap: {r: 0, g: 1, b: 0, a: 0}
+    - _DetailMaskRemap: {r: 0.073529415, g: 0.18749997, b: 0, a: 0}
+    - _DetailMeshRemap: {r: 0, g: 0, b: 0, a: 0}
+    - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissiveTexRemap: {r: 0, g: 0, b: 0, a: 0}
+    - _EmissiveUVs: {r: 1, g: 1, b: 0, a: 0}
+    - _GradientMaskRemap: {r: 0, g: 0, b: 0, a: 0}
+    - _MainColor: {r: 1, g: 1, b: 1, a: 1}
+    - _MainMaskRemap: {r: 0, g: 0, b: 0, a: 0}
+    - _MainUVs: {r: 1, g: 1, b: 0, a: 0}
+    - _SecondColor: {r: 0.06446911, g: 0.09433961, b: 0.014684941, a: 1}
+    - _SecondMaskRemap: {r: 0, g: 0, b: 0, a: 0}
+    - _SecondUVs: {r: 1, g: 1, b: 0, a: 0}
+    - _SubsurfaceDiffusion_Asset: {r: 2.2888926e+38, g: 1.2389358e-26, b: 7.69327e-37, a: 0.00018220427}
+    - _VertexOcclusionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _VertexOcclusionRemap: {r: 0, g: 1, b: 0, a: 0}
+    - _detail_mesh_mode: {r: 0, g: 0, b: 0, a: 0}
+    - _render_normals: {r: -1, g: -1, b: -1, a: 0}
+    - _second_uvs_mode: {r: 1, g: 0, b: 0, a: 0}
+    - _vertex_occlusion_mask_mode: {r: 0, g: 0, b: 0, a: 1}
+  m_BuildTextureStacks: []

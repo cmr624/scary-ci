@@ -1,0 +1,205 @@
+*******************************************************************
+*                             INFO                                *
+*******************************************************************
+
+InfoTitle The Vegetation Engine Lite
+InfoPreset Use this preset to convert assets using the Vegetation Engine Lite shaders.
+InfoStatus ● ● ● ● ●
+//InfoOnline https://www.evolved-software.com/treeit/treeit
+
+*******************************************************************
+*                             PRESET                              *
+*******************************************************************
+
+OutputTransforms USE_ORIGINAL_TRANSFORMS
+
+// Variation
+if MATERIAL_FLOAT_EQUALS _MotionVariationMode 0
+{
+	Mesh SetVariation GET_MASK_PROCEDURAL 3
+}
+
+if MATERIAL_FLOAT_EQUALS _MotionVariationMode 10
+{
+	Mesh SetVariation GET_MASK_FROM_CHANNEL 0
+}
+
+if MATERIAL_FLOAT_EQUALS _MotionVariationMode 20
+{
+	Mesh SetVariation GET_MASK_FROM_CHANNEL 1
+}
+
+if MATERIAL_FLOAT_EQUALS _MotionVariationMode 30
+{
+	Mesh SetVariation GET_MASK_FROM_CHANNEL 2
+}
+
+if MATERIAL_FLOAT_EQUALS _MotionVariationMode 40
+{
+	Mesh SetVariation GET_MASK_FROM_CHANNEL 3
+}
+
+// Occlusion
+if MATERIAL_FLOAT_EQUALS _VertexOcclusionMaskMode 0
+{
+	Mesh SetOcclusion GET_MASK_PROCEDURAL 6
+}
+
+if MATERIAL_FLOAT_EQUALS _VertexOcclusionMaskMode 10
+{
+	Mesh SetOcclusion GET_MASK_FROM_CHANNEL 0
+}
+
+if MATERIAL_FLOAT_EQUALS _VertexOcclusionMaskMode 20
+{
+	Mesh SetOcclusion GET_MASK_FROM_CHANNEL 1
+}
+
+if MATERIAL_FLOAT_EQUALS _VertexOcclusionMaskMode 30
+{
+	Mesh SetOcclusion GET_MASK_FROM_CHANNEL 2
+}
+
+if MATERIAL_FLOAT_EQUALS _VertexOcclusionMaskMode 40
+{
+	Mesh SetOcclusion GET_MASK_FROM_CHANNEL 3
+}
+
+// Detail Mask
+if MATERIAL_FLOAT_EQUALS _DetailMeshMode 0
+{
+	Mesh SetDetailMask GET_MASK_PROCEDURAL 1
+}
+
+if MATERIAL_FLOAT_EQUALS _DetailMeshMode 10
+{
+	Mesh SetDetailMask GET_MASK_FROM_CHANNEL 0
+}
+
+if MATERIAL_FLOAT_EQUALS _DetailMeshMode 20
+{
+	Mesh SetDetailMask GET_MASK_FROM_CHANNEL 1
+}
+
+if MATERIAL_FLOAT_EQUALS _DetailMeshMode 30
+{
+	Mesh SetDetailMask GET_MASK_FROM_CHANNEL 2
+}
+
+if MATERIAL_FLOAT_EQUALS _DetailMeshMode 40
+{
+	Mesh SetDetailMask GET_MASK_FROM_CHANNEL 3
+}
+
+// Motion2
+if MATERIAL_FLOAT_EQUALS _MotionMaskMode_20 0
+{
+	Mesh SetMotion2 GET_MASK_PROCEDURAL 6
+}
+
+if MATERIAL_FLOAT_EQUALS _MotionMaskMode_20 10
+{
+	Mesh SetMotion2 GET_MASK_FROM_CHANNEL 0
+}
+
+if MATERIAL_FLOAT_EQUALS _MotionMaskMode_20 20
+{
+	Mesh SetMotion2 GET_MASK_FROM_CHANNEL 1
+}
+
+if MATERIAL_FLOAT_EQUALS _MotionMaskMode_20 30
+{
+	Mesh SetMotion2 GET_MASK_FROM_CHANNEL 2
+}
+
+if MATERIAL_FLOAT_EQUALS _MotionMaskMode_20 40
+{
+	Mesh SetMotion2 GET_MASK_FROM_CHANNEL 3
+}
+
+// Motion3
+if MATERIAL_FLOAT_EQUALS _MotionMaskMode_30 0
+{
+	Mesh SetMotion3 GET_MASK_FROM_CHANNEL 6
+}
+
+if MATERIAL_FLOAT_EQUALS _MotionMaskMode_30 10
+{
+	Mesh SetMotion3 GET_MASK_FROM_CHANNEL 0
+}
+
+if MATERIAL_FLOAT_EQUALS _MotionMaskMode_30 20
+{
+	Mesh SetMotion3 GET_MASK_FROM_CHANNEL 1
+}
+
+if MATERIAL_FLOAT_EQUALS _MotionMaskMode_30 30
+{
+	Mesh SetMotion3 GET_MASK_FROM_CHANNEL 2
+}
+
+if MATERIAL_FLOAT_EQUALS _MotionMaskMode_30 40
+{
+	Mesh SetMotion3 GET_MASK_FROM_CHANNEL 3
+}
+
+Mesh SetDetailCoord GET_COORD_FROM_CHANNEL 3
+
+Mesh SetHeight GET_MASK_PROCEDURAL 4
+
+Mesh SetPivots GET_PIVOTS_PROCEDURAL 0
+
+*******************************************************************
+
+if SHADER_NAME_CONTAINS Plant Standard Lit
+{
+	Material SET_SHADER SHADER_STANDARD_PLANT
+	Material SET_FLOAT _GlobalColor 0
+	Material SET_FLOAT _GlobalAlpha 0
+	Material SET_FLOAT _SizeFadeStartValue 0
+	Material SET_FLOAT _SizeFadeEndValue 0
+}
+
+if SHADER_NAME_CONTAINS Plant Subsurface Lit
+{
+	Material SET_SHADER SHADER_SUBSURFACE_PLANT
+}
+
+if SHADER_NAME_CONTAINS Prop Standard it
+{
+	Material SET_SHADER SHADER_STANDARD_PROP
+	Material SET_FLOAT _GlobalColor 0
+	Material SET_FLOAT _GlobalAlpha 0
+}
+
+if SHADER_NAME_CONTAINS Prop Subsurface it
+{
+	Material SET_SHADER SHADER_SUBSURFACE_PROP
+	Material SET_FLOAT _GlobalColor 0
+	Material SET_FLOAT _GlobalAlpha 0
+}
+
+
+*******************************************************************
+
+Material COPY_PROPS
+
+// Detail Mask
+if MATERIAL_FLOAT_EQUALS _DetailMeshMode 0
+{
+	Material SET_FLOAT _DetailMeshMode 1
+}
+
+// Detail Mask
+if !MATERIAL_FLOAT_EQUALS _DetailMeshMode 0
+{
+	Material SET_FLOAT _DetailMeshMode 0
+}
+
+// Disable Detail layer if the detail is used as snow
+if MATERIAL_FLOAT_EQUALS _DetailSnowMode 1
+{
+	Material SET_FLOAT _DetailMode 0
+}
+
+
