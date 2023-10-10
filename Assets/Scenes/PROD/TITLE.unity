@@ -319,7 +319,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'CONTENT WARNING: this game is scary and violent.'
+  m_text: 'Warning: Contains violence, blood, gore, and depictions of Florida.
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 369ffa363bdab4763b4b4d3aa85871bb, type: 2}
   m_sharedMaterial: {fileID: -3120218760344472079, guid: 369ffa363bdab4763b4b4d3aa85871bb,
