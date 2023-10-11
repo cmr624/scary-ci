@@ -59,11 +59,11 @@ namespace Unity.FPS.UI
             LookSensitivitySlider.value = m_PlayerInputsHandler.LookSensitivity;
             LookSensitivitySlider.onValueChanged.AddListener(OnMouseSensitivityChanged);
 
-            ShadowsToggle.isOn = QualitySettings.shadows != ShadowQuality.Disable;
-            ShadowsToggle.onValueChanged.AddListener(OnShadowsChanged);
+            //ShadowsToggle.isOn = QualitySettings.shadows != ShadowQuality.Disable;
+            //ShadowsToggle.onValueChanged.AddListener(OnShadowsChanged);
 
-            InvincibilityToggle.isOn = m_PlayerHealth.Invincible;
-            InvincibilityToggle.onValueChanged.AddListener(OnInvincibilityChanged);
+            //InvincibilityToggle.isOn = m_PlayerHealth.Invincible;
+            //InvincibilityToggle.onValueChanged.AddListener(OnInvincibilityChanged);
 
             FramerateToggle.isOn = m_FramerateCounter.UIText.gameObject.activeSelf;
             FramerateToggle.onValueChanged.AddListener(OnFramerateCounterChanged);
@@ -89,13 +89,7 @@ namespace Unity.FPS.UI
             if (Input.GetButtonDown(GameConstants.k_ButtonNamePauseMenu)
                 || (MenuRoot.activeSelf && Input.GetButtonDown(GameConstants.k_ButtonNameCancel)))
             {
-                if (ControlImage.activeSelf)
-                {
-                    ControlImage.SetActive(false);
-                    return;
-                }
-
-                SetPauseMenuActivation(!MenuRoot.activeSelf);
+                PauseGame();
 
             }
 
@@ -109,15 +103,26 @@ namespace Unity.FPS.UI
             }
         }
 
+        private void PauseGame()
+        {
+            if (ControlImage.activeSelf)
+            {
+                ControlImage.SetActive(false);
+                return;
+            }
+
+            SetPauseMenuActivation(!MenuRoot.activeSelf); 
+        }
         public void ClosePauseMenu()
         {
             SetPauseMenuActivation(false);
         }
 
+        public GameObject InGameHUDCanvas;
         void SetPauseMenuActivation(bool active)
         {
             MenuRoot.SetActive(active);
-
+            InGameHUDCanvas.SetActive(!active);
             if (MenuRoot.activeSelf)
             {
                 Cursor.lockState = CursorLockMode.None;
