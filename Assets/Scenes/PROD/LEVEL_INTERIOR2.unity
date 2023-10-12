@@ -8249,6 +8249,9 @@ MonoBehaviour:
   FpsWeaponLayer:
     serializedVersion: 2
     m_Bits: 1024
+  Reloading:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2693502900051288233
 GameObject:
   m_ObjectHideFlags: 0
@@ -8961,7 +8964,7 @@ GameObject:
   - component: {fileID: 8295077430384560914}
   m_Layer: 0
   m_Name: ScaryPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9281,6 +9284,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -9.279175
+      objectReference: {fileID: 0}
+    - target: {fileID: 5116346862923416741, guid: 945616a4ce082408080b01464f1a34d4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 12.744873
       objectReference: {fileID: 0}
     - target: {fileID: 5116346862988221427, guid: 945616a4ce082408080b01464f1a34d4,
         type: 3}
