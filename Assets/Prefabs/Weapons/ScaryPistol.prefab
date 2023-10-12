@@ -110,7 +110,6 @@ GameObject:
   - component: {fileID: 2225486910712267856}
   - component: {fileID: 8323776800172828795}
   - component: {fileID: 8090847488450120274}
-  - component: {fileID: 5879712918297590361}
   m_Layer: 10
   m_Name: ScaryPistol
   m_TagString: Untagged
@@ -147,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ad90ba0b1477764da373f5ec01a8cb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponName: Shotgun
+  WeaponName: ScaryPistol
   WeaponIcon: {fileID: 21300000, guid: 8cbb10368086f014a8b7fc8932e7f436, type: 3}
   CrosshairDataDefault:
     CrosshairSprite: {fileID: 21300000, guid: 1614486eace4a465890db87521dd6720, type: 3}
@@ -175,14 +174,14 @@ MonoBehaviour:
   EjectionPort: {fileID: 0}
   ShellCasingEjectionForce: 2
   ShellPoolSize: 1
-  AmmoReloadRate: 0
-  AmmoReloadDelay: 0
-  MaxAmmo: 8
+  AmmoReloadRate: 2
+  AmmoReloadDelay: 1
+  MaxAmmo: 24
   AutomaticReleaseOnCharged: 0
-  MaxChargeDuration: 1
+  MaxChargeDuration: 0
   AmmoUsedOnStartCharge: 0
-  AmmoUsageRateWhileCharging: 1
-  WeaponAnimator: {fileID: 5879712918297590361}
+  AmmoUsageRateWhileCharging: 0
+  WeaponAnimator: {fileID: 1729332681282657376}
   MuzzleFlashPrefab: {fileID: 748781637555137343, guid: 3f5b545b9a1e74c418b061bba5bb9e2c,
     type: 3}
   UnparentMuzzleFlash: 0
@@ -319,26 +318,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!95 &5879712918297590361
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2225486910712267859}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 29ddbba62c3934f58b7cc4e652848c4f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &2867801751256125023
 GameObject:
   m_ObjectHideFlags: 0
@@ -1496,3 +1475,29 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1210775796182909879}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2021240996034166502 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d41b650ee14654dd59abdd794adf428d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1210775796182909879}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1729332681282657376
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021240996034166502}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 29ddbba62c3934f58b7cc4e652848c4f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
