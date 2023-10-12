@@ -1,4 +1,4 @@
-Shader "Hidden/VLB_HD_BuiltIn_Default"
+Shader "Hidden/VLB_HD_URP_Default"
 {
     Properties
     {
@@ -87,7 +87,7 @@ Shader "Hidden/VLB_HD_BuiltIn_Default"
             {
                 Cull Front
 
-                CGPROGRAM
+                HLSLPROGRAM
                 #if !defined(SHADER_API_METAL) // Removed shader model spec for Metal support https://github.com/keijiro/Cloner/commit/1120493ca2df265d450de3ec1b38a1d388468964
                 #pragma target 3.0
                 #endif
@@ -105,7 +105,10 @@ Shader "Hidden/VLB_HD_BuiltIn_Default"
 
 
                 #define VLB_SHADER_HD 1
-                #include "UnityCG.cginc"
+                #define VLB_SRP_API 1
+                #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+                #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/DeclareDepthTexture.hlsl"
+                #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/UnityInstancing.hlsl"
 
                 #if VLB_RAYMARCHING_QUALITY_0
                 #define VLB_RAYMARCHING_STEP_COUNT 5
@@ -120,14 +123,14 @@ Shader "Hidden/VLB_HD_BuiltIn_Default"
 
                 #include "ShaderDefines.cginc"
                 #include "ShaderProperties.cginc"
-                #include "ShaderSpecificBuiltin.cginc"
+                #include "ShaderSpecificURP.cginc"
                 #include "VolumetricLightBeamSharedHD.cginc"
 
 
                 v2f vert(vlb_appdata v)         { return vertShared(v ); }
                 half4 frag(v2f i) : SV_Target   { return fragShared(i ); }
 
-                ENDCG
+                ENDHLSL
             }
 
         }
