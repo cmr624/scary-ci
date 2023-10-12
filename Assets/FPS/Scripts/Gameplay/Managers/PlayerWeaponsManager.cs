@@ -123,6 +123,7 @@ namespace Unity.FPS.Gameplay
             m_PlayerCamera = m_PlayerCharacterController.PlayerCamera;
         }
 
+        public UnityEvent Reloading;
         void Update()
         {
             // shoot handling
@@ -137,6 +138,7 @@ namespace Unity.FPS.Gameplay
                 {
                     IsAiming = false;
                     activeWeapon.StartReloadAnimation();
+                    Reloading?.Invoke();
                     return;
                 }
                 // handle aiming down sights

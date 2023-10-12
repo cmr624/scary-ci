@@ -82,7 +82,7 @@ namespace Unity.FPS.UI
 
         void Update()
         {
-            float currenFillRatio = m_Weapon.CurrentAmmoRatio;
+            float currenFillRatio = m_Weapon.GetClipRatio();
             AmmoFillImage.fillAmount = Mathf.Lerp(AmmoFillImage.fillAmount, currenFillRatio,
                 Time.deltaTime * AmmoFillMovementSharpness);
 
