@@ -226,7 +226,6 @@ namespace Unity.FPS.Game
 
             IsReloading = false;
         }
-
         public void StartReloadAnimation()
         {
             if (m_CurrentAmmo < m_CarriedPhysicalBullets)
@@ -274,7 +273,14 @@ namespace Unity.FPS.Game
             {
                 CurrentAmmoRatio = m_CurrentAmmo / MaxAmmo;
             }
+            // get current clip ratio
         }
+        
+        // current clip ratio
+        
+        public float GetClipRatio() => ((m_CurrentAmmo%ClipSize)/ ClipSize);
+        
+        
 
         void UpdateCharge()
         {
