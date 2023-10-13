@@ -327,6 +327,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8323776800172828795, guid: b318fabc73446b746a1005cede0c4ceb,
+        type: 3}
+      propertyPath: ShootSfx.Path
+      value: event:/SFX/Gun Shot
+      objectReference: {fileID: 0}
     - target: {fileID: 8628029015234754317, guid: b318fabc73446b746a1005cede0c4ceb,
         type: 3}
       propertyPath: m_Layer
