@@ -23,10 +23,16 @@ namespace Unity.FPS.Game
             Collider[] affectedColliders = Physics.OverlapSphere(center, AreaOfEffectDistance, layers, interaction);
             foreach (var coll in affectedColliders)
             {
+                // check if the collided object is the object that this script is attached to
+                if (coll.gameObject == gameObject)
+                    continue;
+
+                // check if the collided object has a Health component
+                
                 Damageable damageable = coll.GetComponent<Damageable>();
                 if (damageable)
                 {
-                    Health health = damageable.GetComponentInParent<Health>();
+                    Health health = coll.GetComponent<Health>();
                     if (health && !uniqueDamagedHealths.ContainsKey(health))
                     {
                         uniqueDamagedHealths.Add(health, damageable);
