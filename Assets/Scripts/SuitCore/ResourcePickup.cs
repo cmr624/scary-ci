@@ -15,6 +15,14 @@ public class ResourcePickup : Pickup
     
     [FormerlySerializedAs("ResourceManager")] public SuitResourceManager suitResourceManager;
 
+
+    protected override void Start()
+    {
+        base.Start();
+        if (suitResourceManager == null)
+            suitResourceManager = FindObjectOfType<SuitResourceManager>();
+    }
+
     protected override void OnPicked(PlayerCharacterController player)
     {
         if (suitResourceManager)

@@ -513,17 +513,17 @@ MonoBehaviour:
   WeaponRoot: {fileID: 5068978224394670850}
   WeaponMuzzle: {fileID: 2384016127463840408}
   ShootType: 1
-  ProjectilePrefab: {fileID: 8924682559891268397, guid: ec753d54f333bb944b8b04884ad63828,
+  ProjectilePrefab: {fileID: 1102097647282037859, guid: 681c2402266834b5289ebfd11d612553,
     type: 3}
-  DelayBetweenShots: 0
+  DelayBetweenShots: 2
   BulletSpreadAngle: 0
-  BulletsPerShot: 0
+  BulletsPerShot: 1
   RecoilForce: 1
   AimZoomRatio: 1
   AimOffset: {x: 0, y: 0, z: 0}
   AutomaticReload: 1
   HasPhysicalBullets: 0
-  ClipSize: 0
+  ClipSize: 1000
   ShellCasing: {fileID: 0}
   EjectionPort: {fileID: 0}
   ShellCasingEjectionForce: 2
@@ -1074,7 +1074,7 @@ MonoBehaviour:
   DetectionRange: 20
   AttackRange: 10
   KnownTargetTimeout: 12
-  Animator: {fileID: 0}
+  Animator: {fileID: 376312574487102207}
 --- !u!1 &8104244194879210283
 GameObject:
   m_ObjectHideFlags: 0
