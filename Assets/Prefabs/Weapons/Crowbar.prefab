@@ -124,7 +124,7 @@ MonoBehaviour:
       Data2: 1267049943
       Data3: -368973155
       Data4: 25876224
-    Path: event:/Gun Shot
+    Path: event:/SFX/Gun Shot
   ChangeWeaponSfx:
     Guid:
       Data1: 1707181957
