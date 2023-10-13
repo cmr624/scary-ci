@@ -130,11 +130,11 @@ MonoBehaviour:
   FlashOnHitDuration: 0.2
   DamageTick:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -126966083
+      Data2: 1213158456
+      Data3: 1871624114
+      Data4: -1724735722
+    Path: event:/SFX/belial die
   DeathVfx: {fileID: 5098221840606769422}
   DeathVfxSpawnPoint: {fileID: 4125586455514933702}
   LootPrefab: {fileID: 8152090525677112819, guid: 680014cfa035f4f4b8fb8f3b2417fff5,
@@ -161,18 +161,18 @@ MonoBehaviour:
   OnDetectVfx: []
   OnDetectSfx:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1790864441
+      Data2: 1293420578
+      Data3: 283014552
+      Data4: 836766049
+    Path: event:/SFX/belial call to attack
   MovementSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -889860767
+      Data2: 1110159501
+      Data3: -1133908076
+      Data4: -2109839477
+    Path: event:/SFX/belial idle
   PitchDistortionMovementSpeed:
     Min: 1
     Max: 1.5

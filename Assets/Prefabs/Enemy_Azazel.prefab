@@ -148,11 +148,11 @@ MonoBehaviour:
   FlashOnHitDuration: 0.2
   DamageTick:
     Guid:
-      Data1: 1707181957
-      Data2: 1217544738
-      Data3: -399526991
-      Data4: 1984713962
-    Path: event:/Test Placeholder
+      Data1: 1211815239
+      Data2: 1083086627
+      Data3: 1600242336
+      Data4: 54143905
+    Path: event:/SFX/azazel idle
   DeathVfx: {fileID: 8950624839484268180, guid: 2a8f5052fe50f7b41b17149abb0f7414,
     type: 3}
   DeathVfxSpawnPoint: {fileID: 2496326918563300105}
@@ -180,18 +180,18 @@ MonoBehaviour:
   OnDetectVfx: []
   OnDetectSfx:
     Guid:
-      Data1: 1707181957
-      Data2: 1217544738
-      Data3: -399526991
-      Data4: 1984713962
-    Path: event:/Test Placeholder
+      Data1: -646638806
+      Data2: 1101270912
+      Data3: 611165059
+      Data4: 854006101
+    Path: event:/SFX/aael death
   MovementSound:
     Guid:
-      Data1: 1707181957
-      Data2: 1217544738
-      Data3: -399526991
-      Data4: 1984713962
-    Path: event:/Test Placeholder
+      Data1: 1211815239
+      Data2: 1083086627
+      Data3: 1600242336
+      Data4: 54143905
+    Path: event:/SFX/azazel idle
   PitchDistortionMovementSpeed:
     Min: 1
     Max: 1.5
