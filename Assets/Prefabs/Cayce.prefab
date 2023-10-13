@@ -301,11 +301,11 @@ MonoBehaviour:
   WeaponRoot: {fileID: 1612583689004209974}
   WeaponMuzzle: {fileID: 8154917822638300844}
   ShootType: 1
-  ProjectilePrefab: {fileID: 8924682559891268397, guid: ec753d54f333bb944b8b04884ad63828,
+  ProjectilePrefab: {fileID: 1102097647282037859, guid: 0d230be90d9804d3bbce840ce063f7ef,
     type: 3}
-  DelayBetweenShots: 0.2
+  DelayBetweenShots: 1
   BulletSpreadAngle: 0
-  BulletsPerShot: 0
+  BulletsPerShot: 1
   RecoilForce: 1
   AimZoomRatio: 1
   AimOffset: {x: 0, y: 0, z: 0}

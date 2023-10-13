@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Mutant2AnimationController
+  m_Controller: {fileID: 9100000, guid: 4efeeb822335845c89069d2740b8550a, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 4723146814002874508, guid: f727206c4b8e74bc5b4c38c9d63c56eb,
+      type: 3}
+    m_OverrideClip: {fileID: -2822887647731304945, guid: ef81d5fdf79bf4f3789d1893e03b24d8,
+      type: 3}

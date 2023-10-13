@@ -1,0 +1,15 @@
+{
+    "name": "CodeMonkey_KeyDoorSystem_Editor",
+    "references": [
+        "GUID:f22db913ecc5b7346b46995e0a3ec3fd"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
