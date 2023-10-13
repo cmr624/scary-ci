@@ -10444,32 +10444,32 @@ MonoBehaviour:
   FootstepSfxFrequencyWhileSprinting: 0.2
   FootstepSfx:
     Guid:
-      Data1: 1707181957
-      Data2: 1217544738
-      Data3: -399526991
-      Data4: 1984713962
-    Path: event:/Test Placeholder
+      Data1: -587354341
+      Data2: 1287925085
+      Data3: -550498643
+      Data4: -32438380
+    Path: event:/SFX/metal foot steps
   JumpSfx:
     Guid:
-      Data1: 1707181957
-      Data2: 1217544738
-      Data3: -399526991
-      Data4: 1984713962
-    Path: event:/Test Placeholder
+      Data1: -1516375079
+      Data2: 1195091891
+      Data3: 1159399058
+      Data4: -665403099
+    Path: event:/SFX/concrete footsteps
   LandSfx:
     Guid:
-      Data1: 1707181957
-      Data2: 1217544738
-      Data3: -399526991
-      Data4: 1984713962
-    Path: event:/Test Placeholder
+      Data1: 1009214816
+      Data2: 1280152130
+      Data3: -1037329477
+      Data4: 2135044242
+    Path: event:/SFX/pick up
   FallDamageSfx:
     Guid:
-      Data1: 1707181957
-      Data2: 1217544738
-      Data3: -399526991
-      Data4: 1984713962
-    Path: event:/Test Placeholder
+      Data1: -126534732
+      Data2: 1333742680
+      Data3: 510583718
+      Data4: 1536433368
+    Path: event:/SFX/Grunt
   RecievesFallDamage: 1
   MinSpeedForFallDamage: 20
   MaxSpeedForFallDamage: 40

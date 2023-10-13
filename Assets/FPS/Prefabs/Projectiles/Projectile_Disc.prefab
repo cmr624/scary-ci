@@ -110,11 +110,11 @@ MonoBehaviour:
   ImpactVfxSpawnOffset: 0.1
   ImpactSfxClip:
     Guid:
-      Data1: 1707181957
-      Data2: 1217544738
-      Data3: -399526991
-      Data4: 1984713962
-    Path: event:/Test Placeholder
+      Data1: 1268400616
+      Data2: 1250119929
+      Data3: -572222580
+      Data4: -1860849215
+    Path: event:/SFX/mutant2footsteps
   HittableLayers:
     serializedVersion: 2
     m_Bits: 4294967295

@@ -81,11 +81,11 @@ MonoBehaviour:
   RotatingSpeed: 360
   PickupSfx:
     Guid:
-      Data1: 1707181957
-      Data2: 1217544738
-      Data3: -399526991
-      Data4: 1984713962
-    Path: event:/Test Placeholder
+      Data1: 387618250
+      Data2: 1160494628
+      Data3: -1937696335
+      Data4: -633562799
+    Path: event:/SFX/Gun reload
   PickupVfxPrefab: {fileID: 0}
   WeaponPrefab: {fileID: 8323776800172828795, guid: 31d97e822763d1f4cb769f7e3f7f7333,
     type: 3}
@@ -272,6 +272,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8323776800172828795, guid: 31d97e822763d1f4cb769f7e3f7f7333,
+        type: 3}
+      propertyPath: ShootSfx.Path
+      value: event:/SFX/Gun Shot
       objectReference: {fileID: 0}
     - target: {fileID: 9178139022947274294, guid: 31d97e822763d1f4cb769f7e3f7f7333,
         type: 3}

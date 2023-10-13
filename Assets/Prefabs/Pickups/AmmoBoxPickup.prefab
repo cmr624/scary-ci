@@ -9843,11 +9843,11 @@ MonoBehaviour:
   RotatingSpeed: 0
   PickupSfx:
     Guid:
-      Data1: 1707181957
-      Data2: 1217544738
-      Data3: -399526991
-      Data4: 1984713962
-    Path: event:/Test Placeholder
+      Data1: -2108161032
+      Data2: 1164529761
+      Data3: 915027084
+      Data4: -783364357
+    Path: event:/SFX/pickupcloth
   PickupVfxPrefab: {fileID: 7655095426451682942, guid: 4d48b487f11e62940a978c7c0c0cbcb4,
     type: 3}
   Weapon: {fileID: 8323776800172828795, guid: 31d97e822763d1f4cb769f7e3f7f7333, type: 3}

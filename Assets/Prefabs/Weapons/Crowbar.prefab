@@ -120,18 +120,18 @@ MonoBehaviour:
   UnparentMuzzleFlash: 0
   ShootSfx:
     Guid:
-      Data1: -650384519
-      Data2: 1267049943
-      Data3: -368973155
-      Data4: 25876224
-    Path: event:/SFX/Gun Shot
+      Data1: 1128618101
+      Data2: 1104855484
+      Data3: 999609778
+      Data4: 1480808713
+    Path: event:/SFX/pickupmetal
   ChangeWeaponSfx:
     Guid:
-      Data1: 1707181957
-      Data2: 1217544738
-      Data3: -399526991
-      Data4: 1984713962
-    Path: event:/Test Placeholder
+      Data1: 1009214816
+      Data2: 1280152130
+      Data3: -1037329477
+      Data4: 2135044242
+    Path: event:/SFX/pick up
   UseContinuousShootSound: 0
   ContinuousShootStartSfx:
     Guid:

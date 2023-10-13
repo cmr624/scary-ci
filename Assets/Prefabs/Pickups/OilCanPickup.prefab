@@ -82,11 +82,11 @@ MonoBehaviour:
   RotatingSpeed: 0
   PickupSfx:
     Guid:
-      Data1: 1707181957
-      Data2: 1217544738
-      Data3: -399526991
-      Data4: 1984713962
-    Path: event:/Test Placeholder
+      Data1: 1128618101
+      Data2: 1104855484
+      Data3: 999609778
+      Data4: 1480808713
+    Path: event:/SFX/pickupmetal
   PickupVfxPrefab: {fileID: 7655095426451682942, guid: 358eca6adc32a89459c54b6b62d9c825,
     type: 3}
   ResourceName: Agility
