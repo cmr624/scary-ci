@@ -6990,7 +6990,7 @@ MonoBehaviour:
       Data2: 1173580948
       Data3: 674726529
       Data4: 898008162
-    Path: event:/Music
+    Path: event:/Music/Music
   _proximityValue: 1
 --- !u!114 &1461712384
 MonoBehaviour:
