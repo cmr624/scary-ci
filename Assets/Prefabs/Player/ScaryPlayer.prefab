@@ -10362,7 +10362,6 @@ GameObject:
   - component: {fileID: 4616494567110610938}
   - component: {fileID: 3221333157988666445}
   - component: {fileID: 524441142107935334}
-  - component: {fileID: 1652618125905511633}
   - component: {fileID: 4616494567110610937}
   m_Layer: 0
   m_Name: ScaryPlayer
@@ -10669,19 +10668,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1652618125905511633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8233728375694732527}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8534e17a0f90604c9afd4f5c73d829f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Id: 54a14801-87d8-4867-acbc-1376c75b19d6
 --- !u!114 &4616494567110610937
 MonoBehaviour:
   m_ObjectHideFlags: 0
