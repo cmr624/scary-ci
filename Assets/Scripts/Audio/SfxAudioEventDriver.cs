@@ -78,18 +78,35 @@ namespace ScaryJam.Audio
 
             if (!_sfxMapFile.Map.ContainsKey(action))
             {
-                Debug.LogError("Clip playback failed: clip name not found");
+                Debug.LogError($"Audio clip playback failed: SFX map couldn't resolve action '{action}' to an FMOD event GUID");
                 return;
             }
 
             FMOD.GUID guid = _sfxMapFile.Map[action].Guid;
 
-            FireSfxEventFromGuid(guid, sourceObject);
+            try
+            {
+                FireSfxEventFromGuid(guid, sourceObject);
+            }
+            catch (Exception e)
+            {
+                Debug.LogError($"SFX map action '{action}' resolved to a GUID, but FMOD event failed to play");
+                Debug.LogError(e);
+            }
+            
         }
         
         private void FireSfxEventFromReference(EventReference eventReference, GameObject sourceObject = null)
         {
-            FireSfxEventFromGuid(eventReference.Guid, sourceObject);
+            try
+            {
+                FireSfxEventFromGuid(eventReference.Guid, sourceObject);
+            }
+            catch (Exception e)
+            {
+                Debug.LogError($"FMOD event '{eventReference.Path}' failed to play");
+                Debug.LogError(e);
+            }
         }
 
         private void FireSfxEventFromGuid(FMOD.GUID guid, GameObject sourceObject = null)
@@ -98,11 +115,11 @@ namespace ScaryJam.Audio
             {
                 FMODUnity.RuntimeManager.PlayOneShotAttached(guid, sourceObject ? sourceObject : _audioListener.gameObject);
             }
-            catch (Exception e)
+            catch
             {
-                if (_audioListener == null) Debug.LogWarning("no listener");
-                Debug.LogError(e);
-                Debug.LogError("couldn't play sfx; are banks loaded?");
+                if (_audioListener == null) Debug.LogWarning("no FMOD listener in scene");
+                Debug.LogError("Couldn't play FMOD audio; are banks loaded?");
+                throw; 
             }
         }
     }
