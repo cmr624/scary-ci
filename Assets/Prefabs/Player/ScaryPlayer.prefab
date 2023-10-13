@@ -10426,7 +10426,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   GroundCheckDistance: 1
-  MaxSpeedOnGround: 9.744
+  MaxSpeedOnGround: 7.7952
   MovementSharpnessOnGround: 7
   MaxSpeedCrouchedRatio: 0.5
   MaxSpeedInAir: 7
@@ -10681,7 +10681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8534e17a0f90604c9afd4f5c73d829f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Id: 4111b55a-4f4f-40e2-aab3-88e5fc020803
+  m_Id: 54a14801-87d8-4867-acbc-1376c75b19d6
 --- !u!114 &4616494567110610937
 MonoBehaviour:
   m_ObjectHideFlags: 0
