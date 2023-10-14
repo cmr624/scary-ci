@@ -6984,6 +6984,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73fdf11e633e1494a9d375807569028a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _closestEnemyDistance: 9
+  _farthestEnemyDistance: 20
   _musicReference:
     Guid:
       Data1: -1988236991
@@ -6991,7 +6993,6 @@ MonoBehaviour:
       Data3: 674726529
       Data4: 898008162
     Path: event:/Music/Music
-  _proximityValue: 1
 --- !u!114 &1461712384
 MonoBehaviour:
   m_ObjectHideFlags: 0
