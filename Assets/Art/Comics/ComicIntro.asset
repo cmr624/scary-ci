@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75bc6485c9fe4165b642900248f90185, type: 3}
+  m_Name: ComicIntro
+  m_EditorClassIdentifier: 
+  _panelList:
+  - {fileID: 2800000, guid: 56ac56a8123e9da4cb3e642a0c6e96fb, type: 3}
+  - {fileID: 2800000, guid: 513a5f58a4d1c4e448636d1f488ac4d9, type: 3}
+  - {fileID: 2800000, guid: 680ffbd8bc676f640a61a8a3889b9e61, type: 3}
+  - {fileID: 2800000, guid: 2b7c8874e17ad0c459e8c37abf160765, type: 3}
+  - {fileID: 2800000, guid: 02b63d2c973896e45b58ae83971fbf55, type: 3}
+  - {fileID: 2800000, guid: 4913eb21498deb44fbb884fa639fc05a, type: 3}
+  - {fileID: 2800000, guid: b4d487d56e2617f4e811627865b5acd4, type: 3}
