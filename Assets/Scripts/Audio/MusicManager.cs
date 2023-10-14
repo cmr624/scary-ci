@@ -20,6 +20,15 @@ namespace ScaryJam.Audio
             Close, 
             Far
         }
+
+        private const int MaxProximity = 100;
+
+        [Tooltip("Enemies closer than this distance are considered at high proximity to the player (close)")]
+        [SerializeField] private float _closestEnemyDistance = 3f;
+        
+        [Tooltip("Enemies farther than this distance are filtered out of proximity calculations (far)")]
+        [SerializeField] private float _farthestEnemyDistance = 10;
+        public float FarthestEnemyDistance => _farthestEnemyDistance; 
      
         /* Music Parameters
             
@@ -70,8 +79,10 @@ namespace ScaryJam.Audio
 
         [SerializeField] private EventReference _musicReference;
         
-        [SerializeField] private Proximity _proximityValue = Proximity.Far;
+        private int _proximityValue = 0;
         private Dictionary<Proximity, int> _proximityParameterMap;
+        
+        
         
         private void Awake()
         {
@@ -110,7 +121,7 @@ namespace ScaryJam.Audio
             
             _proximityParameterMap = new Dictionary<Proximity, int>()
             {
-                [Proximity.Close] = 100,
+                [Proximity.Close] = MaxProximity,
                 [Proximity.Far] = 0
             };
         }
@@ -129,10 +140,29 @@ namespace ScaryJam.Audio
             _music.setParameterByName(ParameterTrack, _trackParameterMap[track]);
         }*/
 
-        public void SetProximityValue(Proximity proximityValue)
+        public void SetEnemyProximityFromDistance(float distance)
         {
+            // Debug.Log($"Raw enemy distance: {distance}");
+
+            float clampedDist = Mathf.Max(distance - _closestEnemyDistance, 0f); 
+            int dist = MapDistanceToProximity(clampedDist);
+            SetProximityValue(dist);
+        }
+
+        private void SetProximityValue(int proximityValue)
+        {
+            Debug.Log($"New enemy proximity: {proximityValue}");
             _proximityValue = proximityValue;
-            _music.setParameterByName(ParameterProximity, _proximityParameterMap[proximityValue]);
+            _music.setParameterByName(ParameterProximity, proximityValue);
+        }
+
+        private int MapDistanceToProximity(float distance)
+        {
+            // linear conversion
+            // y = -mx + b
+            float slope = -1f * MaxProximity / _farthestEnemyDistance;
+            float proximity = slope * distance + MaxProximity;
+            return (int)Mathf.Clamp(proximity, 0, MaxProximity); 
         }
         
         public void OnDestroy()
