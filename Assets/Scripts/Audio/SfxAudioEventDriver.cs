@@ -12,9 +12,9 @@ namespace ScaryJam.Audio
         
         [SerializeField] private SfxAudioClipMap _sfxMapFile;
         
-        private FMODUnity.StudioListener _audioListener;
+        private StudioListener _audioListener;
 
-        public static FMODUnity.StudioListener Listener => Instance._audioListener;
+        public static StudioListener Listener => Instance._audioListener;
 
         // List of Banks to load
         [FMODUnity.BankRef]
@@ -22,13 +22,13 @@ namespace ScaryJam.Audio
 
         bool CheckAreBanksLoaded()
         {
-            if (FMODUnity.RuntimeManager.HaveAllBanksLoaded) return true;
+            if (RuntimeManager.HaveAllBanksLoaded) return true;
             
             // Iterate all the Studio Banks and start them loading in the background
             // including the audio sample data
             foreach (var bank in Banks)
             {
-                FMODUnity.RuntimeManager.LoadBank(bank, true);
+                RuntimeManager.LoadBank(bank, true);
             }
 
             return false; 
@@ -54,7 +54,7 @@ namespace ScaryJam.Audio
         {
             // TODO: generally bad practice to do a brute-force lookup; 
             // should this be inspector-assigned?
-            _audioListener = FindObjectOfType<FMODUnity.StudioListener>(); 
+            _audioListener = FindObjectOfType<StudioListener>(); 
         }
         
         // users should trigger clip playback through the static wrapper, 
@@ -104,7 +104,9 @@ namespace ScaryJam.Audio
             }
             catch (Exception e)
             {
+                #if UNITY_EDITOR
                 Debug.LogError($"FMOD event '{eventReference.Path}' failed to play");
+                #endif
                 Debug.LogError(e);
             }
         }
