@@ -3,7 +3,12 @@ guid: aac301812eb9446b9b4d7c2e977c52d9
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Alligator
+    second: {fileID: 2100000, guid: e79c99e9606ec6740b1962458b093dff, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
